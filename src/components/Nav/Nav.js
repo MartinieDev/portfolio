@@ -2,15 +2,17 @@ import GitIcon from '../../assets/icons/GitIcon';
 import MoonIcon from '../../assets/icons/MoonIcon';
 import SunIcon from '../../assets/icons/SunIcon';
 
-function Nav({theme = 'dark'}) {
+import './nav.css';
+
+function Nav({ theme = 'dark' }) {
   return (
-    <header className="nav-wrapper">
+    <header className="nav-wrap">
       <div className="nav container">
         <a href="#top" className="brand-container">
           <div className="git-icon">
             <GitIcon />
           </div>
-          <span className="brandText">Martins</span>
+          <span className="logo-name">Martins</span>
         </a>
 
         <div className="nav-right">
@@ -27,9 +29,21 @@ function Nav({theme = 'dark'}) {
             )}
           </div>
 
+          <a
+            href="https://drive.google.com/file/d/1420BUUvPp1ksRlgv1rJubHyXqfhzdBhL/view?usp=drive_link"
+            className="cv-download-btn hide-mobile"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Resume
+          </a>
 
-
-          {/* Hamburger btn */}
+          {/* Mobile hamburger btn */}
+          <button className="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
     </header>
