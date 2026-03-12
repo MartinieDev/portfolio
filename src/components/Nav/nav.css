@@ -1,6 +1,8 @@
 .nav-wrap {
+  position: relative;
   display: sticky;
-  top: 0;
+  margin: 0.5rem;
+  border-radius: 2rem;
   z-index: 50;
   background: var(--navBg);
   backdrop-filter: blur(10px);
@@ -10,9 +12,101 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 0;
+  padding: 0.7rem 1.2rem;
+}
+
+/* Git + Logo */
+.brand-container {
+  display: flex;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  gap: 0.6rem;
+}
+
+.git-icon {
+  color: var(--text);
+}
+
+.logo-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .hide-mobile {
   display: none;
+}
+
+/* Mobile hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 1.3rem;
+  height: 1.1rem;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 0.15rem;
+  border-radius: 1rem;
+  background: var(--text);
+  transition: all 0.3s ease;
+}
+
+.hamburger.open .hamburger-top {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.open .hamburger-middle {
+  opacity: 0; /* hide middle line */
+}
+
+.hamburger.open .hamburger-bottom {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Menu */
+
+.menu {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  height: 0rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  transition: height 0.3s ease;
+  z-index: 50;
+  background-color: var(--accent);
+}
+
+.menu.show-menu {
+  height: 25rem;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  gap: 2rem;
+  text-align: center;
+}
+
+.menu-item a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--text);
+  transition: color 0.3s;
+}
+
+.menu-item a:hover {
+  color: var(--accent);
 }

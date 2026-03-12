@@ -39,6 +39,7 @@ html[data-theme='light'] {
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -56,30 +57,19 @@ body {
     Arial;
 
   color: var(--text);
+}
 
-  background:
-    /* soft glow top left */
-    radial-gradient(
-      600px circle at 10% 10%,
-      color-mix(in srgb, var(--accent) 20%, transparent),
-      transparent 60%
-    ),
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    /* soft glow top right */
-    radial-gradient(
-      600px circle at 90% 20%,
-      color-mix(in srgb, var(--accent2) 18%, transparent),
-      transparent 65%
-    ),
+ul {
+  margin: 0;
+  padding: 0;
+}
 
-    /* subtle diagonal lighting */
-    linear-gradient(
-      120deg,
-      transparent 0%,
-      color-mix(in srgb, var(--accent) 6%, transparent) 40%,
-      transparent 80%
-    ),
-
-    /* base color */
-    var(--bg);
+.container {
+  width: min(var(--max), calc(100% - 40px));
+  margin: 0 auto;
 }
