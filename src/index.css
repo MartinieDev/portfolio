@@ -57,6 +57,21 @@ body {
     Arial;
 
   color: var(--text);
+  margin: 1rem 0.7rem;
+  background:
+   /* soft glow top left */
+    radial-gradient(
+      900px 500px at 15% 10%,
+      color-mix(in srgb, var(--accent) 16%, transparent),
+      transparent 55%
+    ),
+    /* soft glow top right */
+    radial-gradient(
+        900px 500px at 85% 20%,
+        color-mix(in srgb, var(--accent2) 1%, transparent),
+        transparent 55%
+      ),
+    /* base color */ var(--bg);
 }
 
 a {
@@ -64,12 +79,12 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul,
+p {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .container {
-  width: min(var(--max), calc(100% - 40px));
-  margin: 0 auto;
+  padding: 2rem 0.5rem;
 }

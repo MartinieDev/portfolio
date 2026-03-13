@@ -1,15 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+
 import GitIcon from '../../assets/icons/GitIcon';
 import MoonIcon from '../../assets/icons/MoonIcon';
 import SunIcon from '../../assets/icons/SunIcon';
-
-import './nav.css';
 import DownloadIcon from '../../assets/icons/DownloadIcon';
 import ReadCvIcon from '../../assets/icons/ReadCvIcon';
 
+import './nav.css';
+
 function Nav({ theme = 'dark' }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
+  const navRef = useRef(null);
 
   const links = useMemo(
     () => [
@@ -23,24 +24,31 @@ function Nav({ theme = 'dark' }) {
   );
 
   useEffect(function () {
-    console.log(menuRef.current);
+    function handleOutsideClick(e) {
+      const clickedEl = e.target; // The element that was clicked
+      const navEl = navRef.current
 
-    function handleCloseMenu(e) {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
+      // navEl does not contain clickedEl ? close
+      if (!navEl.contains(clickedEl)) {
         setIsMenuOpen(false);
       }
     }
 
-    document.addEventListener('pointerdown', handleCloseMenu);
+    document.addEventListener('pointerdown', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('pointerdown', handleOutsideClick);
+    };
   }, []);
 
-  function handleMenuToggle() {
+  function handleMenuToggle(e) {
+    e.stopPropagation();
     setIsMenuOpen((prev) => !prev);
   }
 
   return (
     <header className="nav-wrap">
-      <div className="nav">
+      <div className="nav" ref={navRef}>
         {/* Git + Logo */}
         <a href="#top" className="brand-container">
           <div className="git-icon">
@@ -84,7 +92,7 @@ function Nav({ theme = 'dark' }) {
         </div>
 
         {/* Mobile menu bar */}
-        <div className={`menu ${isMenuOpen ? 'show-menu' : ''}`} ref={menuRef}>
+        <div className={`menu ${isMenuOpen ? 'show-menu' : ''}`}>
           {/* Mode toggle (mobile) */}
           <div className="mode-wrap">
             <div className="mode-icon-wrap">
@@ -107,7 +115,8 @@ function Nav({ theme = 'dark' }) {
           {/* View or download CV */}
           <div className="cv-wrap">
             <div className="view-cv-icon">
-              <ReadCvIcon size={21} />{' '}
+              <ReadCvIcon size={21} />
+
               <a href="/cv/Nnaukwu_Martins_Frontend_Developer.pdf">
                 View my CV
               </a>
@@ -116,7 +125,8 @@ function Nav({ theme = 'dark' }) {
             <div className="demacator-line"></div>
 
             <div className="download-cv-icon">
-              <DownloadIcon size={21} />{' '}
+              <DownloadIcon size={21} />
+
               <a href="https://drive.google.com/file/d/1420BUUvPp1ksRlgv1rJubHyXqfhzdBhL/view?usp=drive_link">
                 Downlaod CV
               </a>

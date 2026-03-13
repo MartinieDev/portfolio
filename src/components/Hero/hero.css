@@ -1,0 +1,125 @@
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.3rem;
+}
+
+.hero-title {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 900;
+  gap: 0.5rem;
+}
+
+.micro-dot {
+  display: flex;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+}
+
+.hero-stack {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.hero-headline {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.hero-description {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1.2rem 0;
+}
+
+.btn.primary {
+  font-weight: 800;
+  border: 1px solid transparent;
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  color: #000000;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 62%, transparent),
+    color-mix(in srgb, var(--accent2) 48%, transparent)
+  );
+}
+
+.btn.secondary {
+  font-weight: 800;
+  border: 1px solid var(--border);
+  padding: 0.85rem 1rem;
+  border-radius: 0.7rem;
+  color: var(--text);
+  background: var(--softBg);
+}
+
+/* hero right */
+.hero-right {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+.my-hero-card {
+  margin-top: 2rem;
+  border: 1px solid #a3a3a336;
+  border-radius: 1.5rem;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.2 / 1.4;
+  object-position: 50% -50%;
+  object-fit: cover;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent) 20%, transparent),
+    transparent 80%
+  );
+}
+
+.my-info-data {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 1rem 2rem;
+  gap: 0.8rem;
+}
+
+.card-name {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.role-list {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.role-item {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
