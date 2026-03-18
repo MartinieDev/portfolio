@@ -1,13 +1,13 @@
-import CodeIcon from '../../assets/icons/CodeIcon';
-import LayoutIcon from '../../assets/icons/LayoutIcon';
-import MyImage from '../../assets/icons/MyImage.PNG';
-import ReactIcon from '../../assets/icons/ReactIcon';
+import CodeIcon from '../../../assets/icons/CodeIcon';
+import LayoutIcon from '../../../assets/icons/LayoutIcon';
+import MyImage from '../../../assets/icons/MyImage.PNG';
+import ReactIcon from '../../../assets/icons/ReactIcon';
 
 import './hero.css';
 
 function Hero() {
   return (
-    <div className="hero" id="top">
+    <section className="section-container" id="top">
       <div className="hero-grid container">
         <div className="hero-content">
           <p className="hero-title">
@@ -89,7 +89,7 @@ function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

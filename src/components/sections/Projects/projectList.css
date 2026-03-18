@@ -1,0 +1,18 @@
+.project-list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--chipBg);
+}
+
+.section-head .subtitle-muted {
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 300;
+}

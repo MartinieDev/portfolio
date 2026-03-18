@@ -1,5 +1,6 @@
-import Hero from './components/Hero/Hero';
-import Nav from './components/Nav/Nav';
+import Hero from './components/sections/Hero/Hero';
+import Nav from './components/sections/Nav/Nav';
+import ProjectList from './components/sections/Projects/ProjectList';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
 
       <main>
         <Hero />
+        <ProjectList />
       </main>
     </div>
   );

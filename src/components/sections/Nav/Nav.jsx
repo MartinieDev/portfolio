@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import GitIcon from '../../assets/icons/GitIcon';
-import MoonIcon from '../../assets/icons/MoonIcon';
-import SunIcon from '../../assets/icons/SunIcon';
-import DownloadIcon from '../../assets/icons/DownloadIcon';
-import ReadCvIcon from '../../assets/icons/ReadCvIcon';
+import GitIcon from '../../../assets/icons/GitIcon';
+import MoonIcon from '../../../assets/icons/MoonIcon';
+import SunIcon from '../../../assets/icons/SunIcon';
+import DownloadIcon from '../../../assets/icons/DownloadIcon';
+import ReadCvIcon from '../../../assets/icons/ReadCvIcon';
 
 import './nav.css';
 
@@ -26,7 +26,7 @@ function Nav({ theme = 'dark' }) {
   useEffect(function () {
     function handleOutsideClick(e) {
       const clickedEl = e.target; // The element that was clicked
-      const navEl = navRef.current
+      const navEl = navRef.current;
 
       // navEl does not contain clickedEl ? close
       if (!navEl.contains(clickedEl)) {
