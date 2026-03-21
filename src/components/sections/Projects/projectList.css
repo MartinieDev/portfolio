@@ -11,8 +11,3 @@
   background: var(--chipBg);
 }
 
-.section-head .subtitle-muted {
-  color: var(--muted);
-  font-size: .9rem;
-  font-weight: 300;
-}

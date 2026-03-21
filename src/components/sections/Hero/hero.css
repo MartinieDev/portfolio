@@ -41,18 +41,12 @@
   color: var(--muted);
   font-size: 0.9rem;
   font-weight: 300;
-}
-
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin: 1.2rem 0;
+  line-height: 1.55;
 }
 
 .btn.primary {
   font-weight: 800;
-  padding: 0.8rem 1rem;
+  padding: 0.7rem 1rem;
   border-radius: 0.7rem;
   color: #000000;
   background: linear-gradient(

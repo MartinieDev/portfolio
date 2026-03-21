@@ -22,7 +22,7 @@
   width: 0.1rem;
   height: 90%;
   left: 50%;
-  background: linear-gradient(to bottom, transparent, #368fd76d, transparent);
+  background: linear-gradient(to bottom, transparent, var(--blink), transparent);
   animation: blink 10s ease infinite;
 }
 
