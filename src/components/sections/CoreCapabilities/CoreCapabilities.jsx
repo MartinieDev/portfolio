@@ -15,6 +15,12 @@ function CoreCapabilities() {
         />
 
         <div className="capabilities-card">
+          <div className="open-to-work-wrapper">
+            <div className="available-indicator"></div>
+
+            <p className="otw-title">Open to work</p>
+          </div>
+          
           {capabilitiesData.map((capabilitiyObj) => (
             <CapabilityGroup
               key={capabilitiyObj.title}
@@ -38,12 +44,6 @@ function CoreCapabilities() {
                   <div className="key-title">{capabilitiyObj.title}</div>
                 </div>
               ))}
-            </div>
-
-            <div className="open-to-work-wrapper">
-              <div className="available-indicator"></div>
-
-              <p className="otw-title">Open to work</p>
             </div>
           </div>
         </div>
