@@ -87,7 +87,9 @@ function About() {
                 >
                   <div className="stat-value">
                     {statData.value}
-                    {statData.sign && <sign>{statData.sign}</sign>}
+                    {statData.sign && (
+                      <span className="sign">{statData.sign}</span>
+                    )}
                   </div>
                   <div className="stat-label">{statData.label}</div>
                 </div>

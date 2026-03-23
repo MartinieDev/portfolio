@@ -85,7 +85,7 @@
   font-weight: 900;
 }
 
-.stat-value sign {
+.stat-value .sign {
   position: absolute;
   color: var(--accent);
   font-size: 0.8rem;
