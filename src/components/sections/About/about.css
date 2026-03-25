@@ -1,7 +1,15 @@
 .about-section {
   margin: 0;
-  padding: 1rem;
-  /* background: var(--sectionBg); */
+  padding: 3rem 1.5rem;
+  border-top-right-radius: 4rem;
+  border-bottom-left-radius: 4rem;
+  background: var(--sectionBg);
+}
+
+.frontend-code {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
 }
 
 .about-text {
@@ -29,10 +37,15 @@
   opacity: 1;
 }
 
-.about-text.show p:nth-child(2) {
+/* .about-text.show p:nth-child(2) {
   transform: translateY(0);
   transition-delay: 0.6s;
   opacity: 1;
+} */
+
+.paint-text {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .about-stats {
@@ -89,7 +102,7 @@
 }
 
 .stat-label {
-  color: #b5b1b184;
+  color: var(--muted);
   font-size: 0.8rem;
   font-weight: 300;
 }

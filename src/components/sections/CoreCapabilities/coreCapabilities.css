@@ -44,7 +44,7 @@
 .category-title {
   color: var(--text-muted);
   font-size: 0.8rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .pill-wrapper {
@@ -97,7 +97,7 @@
 .key-title {
   color: var(--text-muted);
   font-size: 0.7rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .open-to-work-wrapper {

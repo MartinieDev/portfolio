@@ -57,4 +57,36 @@
 //     </div>
 //   );
 // }
-  
+
+
+  // <p>
+  //   I approach every project with care, turning ideas into web
+  //   interfaces that are both functional and intuitive. My focus is
+  //   on writing clean, maintainable code and structuring applications
+  //   clearly, so every interaction feels smooth, reliable, and
+  //   enjoyable.
+  // </p>
+
+  // <p>
+  //   I don’t just focus on completing tasks. I design with
+  //   scalability, maintainability, and long-term reliability in mind,
+  //   paying attention to the details that elevate a product from
+  //   functional to polished.
+  // </p>
+
+
+  // <p>
+  //   I'm a frontend developer focused on building and improving real
+  //   products. I hold a degree in Electrical and Electronic
+  //   Engineering, which has helped me develop a strong
+  //   problem-solving mindset that I now apply to building interfaces
+  //   that work smoothly and scale effectively.
+  // </p>
+
+  // <p>
+  //   Through structured learning and hands-on projects, I've built
+  //   applications using both MVC patterns and component-based
+  //   architectures. I focus on responsive layouts, managing
+  //   application state, and writing clean, maintainable code, always
+  //   keeping the user experience at the heart of every decision.
+  // </p>

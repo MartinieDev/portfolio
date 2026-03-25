@@ -5,7 +5,7 @@ import './about.css';
 
 const stats = [
   { value: '2', sign: '+', label: 'Years building' },
-  { value: '3', sign: '+', label: 'Projects shipped' },
+  { value: '5', sign: '+', label: 'Projects shipped' },
   { value: '3', sign: '+', label: 'Tech stacks' },
   { value: '∞', sign: '', label: 'Attention to detail' },
 ];
@@ -37,29 +37,23 @@ function About() {
   return (
     <div id="about" className="about-section container">
       <div>
-        <SectionHead title="About Me" TagLevel="h2" />
+        {/* <div className="frontend-code">{`<Frontend Developer />`}</div> */}
 
-        <div className="section-divider"></div>
+        <SectionHead title="About Me" TagLevel="h2" />
 
         <div className="about-body">
           {/* Text + buttons */}
           <div className="about-left">
             <div className="about-text" ref={aboutRef}>
               <p>
-                I approach every project with care, turning ideas into web
-                interfaces that are both functional and intuitive. My focus is
-                on writing clean, maintainable code and structuring applications
-                clearly, so every interaction feels smooth, reliable, and
-                enjoyable.
+                Frontend developer with an{' '}
+                <span className="paint-text">Electrical Engineering</span>{' '}
+                background. i build responsive scalable interfaces with clean
+                code and{' '}
+                <span className="paint-text">
+                  user experience at the center of every decision
+                </span>
               </p>
-
-              <p>
-                I don’t just focus on completing tasks. I design with
-                scalability, maintainability, and long-term reliability in mind,
-                paying attention to the details that elevate a product from
-                functional to polished.
-              </p>
-
               <div className="hero-actions" style={{ margin: '1rem 0' }}>
                 <a className="btn primary" href="#contact">
                   Get In Touch
