@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { easeIn, easeOut, motion } from 'framer-motion';
-import { filter } from 'framer-motion/client';
+// import { filter } from 'framer-motion/client';
 
 import CodeIcon from '../../../assets/icons/CodeIcon';
 import LayoutIcon from '../../../assets/icons/LayoutIcon';
@@ -21,14 +21,14 @@ const bluredFadeUp = {
   hidden: {
     opacity: 0,
     filter: 'blur(6px)',
-    y: 15,
+    y: 60,
   },
   show: {
     opacity: 1,
     filter: 'blur(0px)',
     y: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.5,
       ease: easeIn,
     },
   },
@@ -40,7 +40,7 @@ const imageVariant = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 1.2,
+      duration: 0.5,
       ease: easeOut,
     },
   },
@@ -68,40 +68,40 @@ function Hero() {
         </motion.div>
 
         <motion.div variants={bluredFadeUp}>
-          <motion.h1 className="hero-headline" variants={bluredFadeUp}>
+          <h1 className="hero-headline">
             Engineering Thoughtful Digital Experiences
-          </motion.h1>
+          </h1>
 
-          <motion.p className="hero-description" variants={bluredFadeUp}>
+          <p className="hero-description">
             I bring ideas to life by building responsive web interfaces. <br />{' '}
             I focus on using modern technologies and writing clean, maintainable
             code so that every experience feels smooth, fast, and enjoyable for
             users.
-          </motion.p>
-        </motion.div>
+          </p>
 
-        <motion.div className="hero-actions" variants={bluredFadeUp}>
-          <motion.a
-            className="btn primary"
-            href="#contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.85 }}
-            transition={{ type: 'spring', stiffness: 500 }}
-          >
-            Get In Touch
-          </motion.a>
+          <div className="hero-actions">
+            <motion.a
+              className="btn primary"
+              href="#contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.85 }}
+              transition={{ type: 'spring', stiffness: 500 }}
+            >
+              Get In Touch
+            </motion.a>
 
-          <a
-            className="btn secondary"
-            href="https://drive.google.com/file/d/1420BUUvPp1ksRlgv1rJubHyXqfhzdBhL/view?usp=drive_link"
-            target="_blank"
-            rel="noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.85 }}
-            transition={{ type: 'spring', stiffness: 400 }}
-          >
-            Download CV
-          </a>
+            <a
+              className="btn secondary"
+              href="https://drive.google.com/file/d/1420BUUvPp1ksRlgv1rJubHyXqfhzdBhL/view?usp=drive_link"
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.85 }}
+              transition={{ type: 'spring', stiffness: 400 }}
+            >
+              Download CV
+            </a>
+          </div>
         </motion.div>
 
         <motion.div
