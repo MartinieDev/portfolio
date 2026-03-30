@@ -6,44 +6,6 @@ import ReactIcon from '../../../assets/icons/ReactIcon';
 
 import './hero.css';
 
-// const containerVariants = {
-//   hidden: {},
-//   show: {
-//     transition: {
-//       staggerChildren: 0.5,
-//     },
-//   },
-// };
-
-// const bluredFadeUp = {
-//   hidden: {
-//     opacity: 0,
-//     filter: 'blur(6px)',
-//     y: 60,
-//   },
-//   show: {
-//     opacity: 1,
-//     filter: 'blur(0px)',
-//     y: 0,
-//     transition: {
-//       duration: 0.5,
-//       ease: 'easeIn',
-//     },
-//   },
-// };
-
-// const imageVariant = {
-//   hidden: { opacity: 0, scale: 0.9 },
-//   show: {
-//     opacity: 1,
-//     scale: 1,
-//     transition: {
-//       duration: 0.5,
-//       ease: 'easeOut',
-//     },
-//   },
-// };
-
 function Hero() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
@@ -57,21 +19,6 @@ function Hero() {
     show: {
       opacity: 1,
       filter: 'blur(0px)',
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: 'easeOut',
-      },
-    },
-  };
-
-  const buttonVariant = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-    },
-    show: {
-      opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
