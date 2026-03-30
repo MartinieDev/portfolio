@@ -1,13 +1,13 @@
 .project-list-wrap {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .work-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   background: var(--chipBg);
 }
 

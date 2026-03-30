@@ -1,14 +1,13 @@
 import SectionHead from '../../reusables/SectionHead';
 import CapabilityGroup from './CapabilityGroup/CapabilityGroup';
 import { capabilitiesData } from '../../../data/capabilitiesData';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
+import useInView from '../../hooks/useInView';
 
 import './coreCapabilities.css';
-import { useEffect, useRef } from 'react';
 
 function CoreCapabilities() {
-  const control = useAnimation();
-  const cardRef = useRef(null);
+  const [containerRef, isInView] = useInView({ threshold: 0.3 });
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.8, y: 50, filter: 'blur(8px)' },
@@ -20,28 +19,6 @@ function CoreCapabilities() {
       transition: { duration: 1, ease: 'easeOut' },
     },
   };
-
-  useEffect(
-    function () {
-      const observerCB = function (e) {
-        e.forEach((entry) => {
-          if (entry.isIntersecting) {
-            control.start('show');
-          }
-        });
-      };
-
-      const observerOptions = {
-        root: null,
-        threshold: 0.3,
-      };
-
-      const observer = new IntersectionObserver(observerCB, observerOptions);
-
-      if (cardRef.current) observer.observe(cardRef.current);
-    },
-    [control],
-  );
 
   return (
     <div
@@ -59,10 +36,10 @@ function CoreCapabilities() {
 
         <motion.div
           className="capabilities-card"
-          ref={cardRef}
+          ref={containerRef}
           variants={cardVariants}
           initial="hidden"
-          animate={control}
+          animate={isInView ? 'show' : 'hidden'}
           whileHover={{ scale: 1.02 }}
         >
           <div className="open-to-work-wrapper">

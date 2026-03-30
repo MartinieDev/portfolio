@@ -15,7 +15,7 @@ html[data-theme='dark'] {
   --text: rgba(255, 255, 255, 0.92);
   --muted: rgba(255, 255, 255, 0.72);
   --availableBg: #1fbdb81b;
-  --accent: #21b87c;
+  --accent: #12a269;
   /* --accent: #22c55e;  */
   --accent2: #60a5fa; /* soft blue */
   --blink: #368fd76d;
@@ -120,6 +120,11 @@ h3,
 p {
   margin: 0;
   padding: 0;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
 }
 
 .section-container {
