@@ -3,7 +3,7 @@ import CapabilityPill from '../CapabilityPill/CapabilityPill';
 function CapabilityGroup({ capabilitiyObj }) {
   return (
     <div className="capability-group">
-      <div className="title-wrapper">
+      <div className="capability-title-wrapper">
         <div
           className="title-indicator"
           style={{

@@ -11,6 +11,7 @@ function ProjectImages({ projectImg, title = 'Project preview' }) {
               src={src}
               alt={``}
               style={{ borderRadius: '1.5rem 1.5rem 0 0' }}
+              draggable={false}
             />
           </div>
         ))}

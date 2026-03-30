@@ -49,7 +49,7 @@ html[data-theme='light'] {
   --text-white: #f6f7fb;
   --muted: rgb(15, 23, 42);
   --availableBg: #0000009c;
-  --accent: #22c55e; /* sky */
+  --accent: #22c55edb; /* sky */
   --accent2: #0ea5e9; /* green */
   --blink: #02030420;
   --navBg: rgba(219, 222, 232, 0.72);
@@ -99,6 +99,16 @@ body {
 /* ==============================
               Reusables
 =============================== */
+.hero-image,
+.project-preview-image {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* modern browsers */
+
+  -webkit-touch-callout: none; /* disables long press menu on iOS */
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -149,7 +159,7 @@ p {
   padding: 0;
   margin: 0;
   bottom: -1rem;
-  left: .1rem;
+  left: 0.1rem;
 }
 
 .title-wrapper {

@@ -10,14 +10,14 @@
 .capability-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.9rem;
   margin: 0 0 1.5rem;
 }
 
-.title-wrapper {
+.capability-title-wrapper {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .title-indicator {
@@ -67,7 +67,7 @@
 
 .tool-name {
   color: var(--text);
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   font-weight: 500;
 }
 

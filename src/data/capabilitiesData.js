@@ -6,6 +6,7 @@ import NetlifyIcon from '../assets/icons/techIcons/NetlifyIcon';
 import ReactIcon from '../assets/icons/ReactIcon';
 import TailwindIcon from '../assets/icons/techIcons/TailwindIcon';
 import VercelIcon from '../assets/icons/techIcons/Vercel';
+import FramerIcon from '../assets/icons/techIcons/FramerIcon';
 
 export const capabilitiesData = [
   {
@@ -23,6 +24,7 @@ export const capabilitiesData = [
     pillContents: [
       { title: 'React', icon: <ReactIcon size={21} /> },
       { title: 'Tailwind', icon: <TailwindIcon size={18} /> },
+      { title: 'Framer Motion', icon: <FramerIcon size={18} /> },
     ],
   },
   {

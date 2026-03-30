@@ -58,35 +58,99 @@
 //   );
 // }
 
+// <p>
+//   I approach every project with care, turning ideas into web
+//   interfaces that are both functional and intuitive. My focus is
+//   on writing clean, maintainable code and structuring applications
+//   clearly, so every interaction feels smooth, reliable, and
+//   enjoyable.
+// </p>
 
-  // <p>
-  //   I approach every project with care, turning ideas into web
-  //   interfaces that are both functional and intuitive. My focus is
-  //   on writing clean, maintainable code and structuring applications
-  //   clearly, so every interaction feels smooth, reliable, and
-  //   enjoyable.
-  // </p>
+// <p>
+//   I don’t just focus on completing tasks. I design with
+//   scalability, maintainability, and long-term reliability in mind,
+//   paying attention to the details that elevate a product from
+//   functional to polished.
+// </p>
 
-  // <p>
-  //   I don’t just focus on completing tasks. I design with
-  //   scalability, maintainability, and long-term reliability in mind,
-  //   paying attention to the details that elevate a product from
-  //   functional to polished.
-  // </p>
+// <p>
+//   I'm a frontend developer focused on building and improving real
+//   products. I hold a degree in Electrical and Electronic
+//   Engineering, which has helped me develop a strong
+//   problem-solving mindset that I now apply to building interfaces
+//   that work smoothly and scale effectively.
+// </p>
 
+// <p>
+//   Through structured learning and hands-on projects, I've built
+//   applications using both MVC patterns and component-based
+//   architectures. I focus on responsive layouts, managing
+//   application state, and writing clean, maintainable code, always
+//   keeping the user experience at the heart of every decision.
+// </p>
 
-  // <p>
-  //   I'm a frontend developer focused on building and improving real
-  //   products. I hold a degree in Electrical and Electronic
-  //   Engineering, which has helped me develop a strong
-  //   problem-solving mindset that I now apply to building interfaces
-  //   that work smoothly and scale effectively.
-  // </p>
+// LEVEL 1
+// 1. users.filter(userObj => userObj.active === true)
+// 2. users.map(userObj => userObj.name)
+// 3. users.reduce((acc, curVal) => acc + curVal, 0)
+// 4. const unique =[...new Set(arr)]
 
-  // <p>
-  //   Through structured learning and hands-on projects, I've built
-  //   applications using both MVC patterns and component-based
-  //   architectures. I focus on responsive layouts, managing
-  //   application state, and writing clean, maintainable code, always
-  //   keeping the user experience at the heart of every decision.
-  // </p>
+// LEVEL 2
+// 1. users
+//   .filter((userObj) => userObj.age >= 18)
+//   .sort((a, b) => a.name - b.name)
+//   .map((userObj) => userObj.name);
+
+// 2. function freqCounter(arr) {
+//   const organized = {}
+
+//   for(let i = 0; i < arr.length; i++) {
+//     if(organized[arr[i]]) {
+//       organized[arr[i]] =  organized[arr[i]] + 1
+//     } else {
+//       organized[arr[i]] =   1
+//     }
+//   }
+
+//   return organized;
+// }
+
+// 3. no idea
+
+// 4. function flatArr(arr) {
+//   const newArr = [];
+
+//   for(let i=0; i<arr.length; i++) {
+//     if(Array.isArray(arr[i])) {
+//       newArr.push(...arr[i])
+//     }
+//   } else {
+//     newArr.push(arr[i])
+//   }
+//   return newArr
+// }
+
+// function grouped(arr) {
+//   const storage = {};
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!storage[arr[i].age]) {
+//       storage[arr[i].age] = [arr[i].name];
+//     } else {
+//       storage[arr[i].age].push(arr[i].name);
+//     }
+//   }
+
+//   return storage;
+// }
+
+// function realUsers(users) {
+//   return users.filter((userObj) => userObj.name !== '' && userObj.age !== null);
+// }
+
+// function sort(users) {
+//   return users
+//     .sort((a, b) => a.age - b.age)
+//     .map((dataObj) => dataObj.name)
+//     .sort();
+// }
