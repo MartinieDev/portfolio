@@ -7,11 +7,12 @@ import useInView from '../../hooks/useInView';
 import './coreCapabilities.css';
 
 function CoreCapabilities() {
-  const [containerRef, isInView] = useInView({ threshold: 0.3 });
+  const { ref: containerRef, isInView } = useInView({ threshold: 0.3 });
 
   const cardVariants = {
-    hidden: { opacity: 0, scale: 0.8, y: 50, filter: 'blur(8px)' },
-    show: {
+    hidden: { opacity: 0, scale: 0.9, y: 50, filter: 'blur(8px)' },
+
+    visible: {
       opacity: 1,
       scale: 1,
       y: 0,
@@ -25,7 +26,7 @@ function CoreCapabilities() {
       id="core-capabilities"
       className="capabilities-section container"
       initial="hidden"
-      animate="show"
+      animate="visible"
     >
       <div>
         <SectionHead
@@ -39,7 +40,7 @@ function CoreCapabilities() {
           ref={containerRef}
           variants={cardVariants}
           initial="hidden"
-          animate={isInView ? 'show' : 'hidden'}
+          animate={isInView ? 'visible' : 'hidden'}
           whileHover={{ scale: 1.02 }}
         >
           <div className="open-to-work-wrapper">

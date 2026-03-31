@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
-export default function useInView(observerOptions = {}) {
-  const containerRef = useRef(null);
+export default function useInView(observerOptions = {}, allowToggle = true) {
+  const ref = useRef(null); // DOM element to observe
   const [isInView, setIsInView] = useState(false);
 
   useEffect(function () {
@@ -9,8 +9,10 @@ export default function useInView(observerOptions = {}) {
       const entry = entries[0]; // Pick first element (we usually observe the section container)
 
       if (entry.isIntersecting) {
-        setIsInView(true);
-      } 
+        setIsInView(true); // card has entered the viewport → set state to true & wait until it leaves
+      } else if (allowToggle) {
+        setIsInView(false); // card has left the viewport → set state to false and wait until it re-enters
+      }
     };
 
     const defaultOptions = {
@@ -23,12 +25,10 @@ export default function useInView(observerOptions = {}) {
 
     const observer = new IntersectionObserver(observerCB, mergedOptions);
 
-    if (containerRef.current) observer.observe(containerRef.current);
+    if (ref.current) observer.observe(ref.current);
 
-    return () => {
-      if (containerRef.current) observer.unobserve(containerRef.current);
-    };
+    return () => observer.disconnect();
   }, []);
 
-  return [containerRef, isInView];
+  return { ref, isInView };
 }

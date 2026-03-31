@@ -10,7 +10,7 @@ function SectionHead({ title, subtitle, TagLevel }) {
       }}
     >
       <div className="title-wrapper">
-        <GridDots rows="8" cols="10" size="2.5" />
+        <GridDots rows="9" cols="10" size="2.5" />
 
         <TagLevel className="head-title">{title}</TagLevel>
       </div>

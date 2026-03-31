@@ -58,12 +58,20 @@ function Hero() {
             Engineering Thoughtful Digital Experiences
           </h1>
 
-          <p className="hero-description" variants={textVariant}>
+          {/* <p className="hero-description" variants={textVariant}>
             I bring ideas to life by building responsive web interfaces. <br />{' '}
             I focus on using modern technologies and writing clean, maintainable
             code so that every experience feels smooth, fast, and enjoyable for
             users.
-          </p>
+          </p> */}
+          <div className="hero-description" variants={textVariant}>
+            <p className='hero-paragraph'>Engineering is about solving problems with precision.</p>
+            <p className='hero-paragraph'>Design is about solving them with empathy.</p>
+            <p className='hero-paragraph'>
+              I work where those two overlap, building web interfaces that hold
+              up technically and feel right to the people using them.
+            </p>
+          </div>
 
           <div className="hero-actions">
             <motion.a

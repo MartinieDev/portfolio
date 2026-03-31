@@ -7,6 +7,10 @@
   background: var(--container-bg);
 }
 
+.work-card.active-shadow {
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
 .work-body {
   display: flex;
   padding: 0 1rem 1rem;
@@ -58,10 +62,17 @@
   color: var(--text);
 }
 
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
 .muted-subtitle {
   font-size: 0.7rem;
   font-weight: 700;
   color: var(--muted);
+  margin: 0;
 }
 
 .muted-description {

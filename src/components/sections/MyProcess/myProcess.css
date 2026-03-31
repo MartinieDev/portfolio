@@ -1,10 +1,10 @@
 .my-process-section {
   margin: 1rem 0;
   padding: 1rem 1.5rem 3.5rem;
-  border-top: 1px solid var(--border-muted);
+  /* border-top: 1px solid var(--border-muted); */
   /* border-top-right-radius: 2rem;
   border-bottom-left-radius: 2rem; */
-  background: var(--sectionBg);
+  background: var(--container-bg);
 }
 
 /* Example CSS */

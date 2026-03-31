@@ -12,7 +12,6 @@
 .hero-title {
   display: inline-flex;
   align-items: center;
-  font-size: 1.05rem;
   font-weight: 900;
   gap: 0.5rem;
 }
@@ -42,6 +41,12 @@
   font-size: 0.9rem;
   font-weight: 300;
   line-height: 1.55;
+}
+
+.hero-paragraph {
+  line-height: 1.8;
+  margin-bottom: 0rem;
+
 }
 
 /* hero right */
