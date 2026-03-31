@@ -3,12 +3,12 @@ import SectionHead from '../../reusables/SectionHead';
 
 import './about.css';
 
-const stats = [
-  { value: '2', sign: '+', label: 'Years building' },
-  { value: '5', sign: '+', label: 'Projects shipped' },
-  { value: '3', sign: '+', label: 'Tech stacks' },
-  { value: '∞', sign: '', label: 'Attention to detail' },
-];
+// const stats = [
+//   { value: '2', sign: '+', label: 'Years building' },
+//   { value: '5', sign: '+', label: 'Projects shipped' },
+//   { value: '3', sign: '+', label: 'Tech stacks' },
+//   { value: '∞', sign: '', label: 'Attention to detail' },
+// ];
 
 function About() {
   const aboutRef = useRef(null);
