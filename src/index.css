@@ -1,6 +1,6 @@
 @import './satoshi.css';
 
-: root {
+:root {
   --radius: 18px;
   --max: 1120px;
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
