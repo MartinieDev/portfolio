@@ -105,7 +105,7 @@
 }
 
 .menu.show-menu {
-  height: 23.5rem;
+  height: 26em;
 }
 
 /* theme/mode */
@@ -132,8 +132,8 @@
   display: flex;
   flex-direction: column;
   padding: 2rem 0;
-  margin-bottom: 2.8rem;
-  gap: 1.2rem;
+  margin-bottom: 3.5rem;
+  gap: 1.5rem;
   text-align: center;
 }
 

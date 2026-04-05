@@ -154,3 +154,79 @@
 //     .map((dataObj) => dataObj.name)
 //     .sort();
 // }
+.process-container-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process-line {
+  position: absolute; /* sits behind steps */
+  left: 50%; /* center horizontally */
+  top: 0;
+  width: 2px; /* thin line */
+  height: 100%; /* spans full container */
+  background-color: var(--accent);
+  transform: translateX(-50%); /* center line exactly */
+  z-index: 0; /* behind steps */
+}
+
+.my-process-section {
+  top: 0;
+  margin: 1rem 0;
+  padding: 1rem 1.5rem 3.5rem;
+  /* border-top: 1px solid var(--border-muted); */
+  /* border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem; */
+  background: var(--container-bg);
+}
+
+/* ProcessStep */
+.process-step-container {
+  display: flex;
+  align-items: flex-start; /* top-aligned */
+  gap: 1rem;
+  margin: 2rem 0;
+  position: relative; /* to be above line */
+  z-index: 1; /* step sits above line */
+  width: 100%; /* optional for full width */
+  max-width: 600px; /* optional to constrain layout */
+  background-color: #292e33;
+}
+
+.process-number {
+  font-family: 'satoshi', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: transparent;
+  /* -webkit-text-stroke: 1px var(--accent); */
+}
+
+.process-left {
+  flex-direction: row;
+}
+
+.process-right {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.process-tag {
+  font-family: 'satoshi', sans-serif;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.process-title {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.process-description {
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 0.8rem;
+}

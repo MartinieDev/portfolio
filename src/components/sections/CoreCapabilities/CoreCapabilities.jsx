@@ -7,7 +7,7 @@ import useInView from '../../hooks/useInView';
 import './coreCapabilities.css';
 
 function CoreCapabilities() {
-  const { ref: containerRef, isInView } = useInView({ threshold: 0.3 });
+  const { ref: containerRef, isInView } = useInView({ threshold: 0.3 }, false);
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9, y: 50, filter: 'blur(8px)' },

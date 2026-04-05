@@ -10,98 +10,91 @@ function Hero() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
   // Framer variants
-  const textVariant = {
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15, // delay between each child
+        delayChildren: 0.3, // delay before first child
+      },
+    },
+  };
+  const itemVariants = {
     hidden: {
       opacity: 0,
-      filter: 'blur(4px)',
-      y: 30,
+      y: 15,
     },
-    show: {
+    visible: {
       opacity: 1,
-      filter: 'blur(0px)',
       y: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.6,
         ease: 'easeOut',
       },
     },
   };
 
-  const imageVariant = {
-    hidden: {
-      opacity: 0,
-      scale: 0.95,
-    },
-    show: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 1, ease: 'easeOut', delay: 0.4 },
-    },
-  };
-
   return (
-    <section id="top" className="section-container">
+    <motion.section
+      id="top"
+      className="section-container"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="hero-grid container">
         {/* LEFT CONTENT */}
-        <motion.div
-          className="hero-content"
-          initial="hidden"
-          animate="show"
-          variants={textVariant}
-        >
-          <p className="hero-title">
+        <div className="hero-content">
+          <motion.p className="hero-title" variants={itemVariants}>
             <span className="micro-dot" />
             Frontend Software Engineer
-          </p>
+          </motion.p>
 
-          <h1 className="hero-headline" variants={textVariant}>
+          <motion.h1 className="hero-headline" variants={itemVariants}>
             Engineering Thoughtful Digital Experiences
-          </h1>
+          </motion.h1>
 
-          {/* <p className="hero-description" variants={textVariant}>
-            I bring ideas to life by building responsive web interfaces. <br />{' '}
-            I focus on using modern technologies and writing clean, maintainable
-            code so that every experience feels smooth, fast, and enjoyable for
-            users.
-          </p> */}
-          <div className="hero-description" variants={textVariant}>
-            <p className='hero-paragraph'>Engineering is about solving problems with precision.</p>
-            <p className='hero-paragraph'>Design is about solving them with empathy.</p>
-            <p className='hero-paragraph'>
+          <div className="hero-description" variants={itemVariants}>
+            <motion.p className="hero-paragraph" variants={itemVariants}>
+              Engineering is about solving problems with precision.
+            </motion.p>
+            <motion.p className="hero-paragraph" variants={itemVariants}>
+              Design is about solving them with empathy.
+            </motion.p>
+            <motion.p className="hero-sub-extra" variants={itemVariants}>
               I work where those two overlap, building web interfaces that hold
               up technically and feel right to the people using them.
-            </p>
+            </motion.p>
           </div>
 
-          <div className="hero-actions">
-            <motion.a
+          <motion.div className="hero-actions" variants={itemVariants}>
+            <a
               className="btn primary"
+              href="#projects"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.85 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              See My Works
+            </a>
+
+            <a
+              className="btn secondary"
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.85 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
               Get In Touch
-            </motion.a>
-
-            <a
-              className="btn secondary"
-              href="https://drive.google.com/file/d/1420BUUvPp1ksRlgv1rJubHyXqfhzdBhL/view?usp=drive_link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Download CV
             </a>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* RIGHT IMAGE */}
         <motion.div
           className="hero-right"
           aria-hidden="false"
-          initial="hidden"
-          animate="show"
-          variants={imageVariant}
+          variants={itemVariants}
         >
           <div className="my-hero-card">
             <img
@@ -137,7 +130,7 @@ function Hero() {
           </div>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

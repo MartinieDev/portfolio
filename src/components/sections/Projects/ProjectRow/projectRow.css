@@ -117,7 +117,7 @@
 .stack-pill {
   font-size: 0.7rem;
   font-weight: 400;
-  background: var(--sectionBg);
+  background: var(--container-bg);
   padding: 0.5rem;
   border: 1px solid var(--cardBg);
   border-radius: 0.8rem;

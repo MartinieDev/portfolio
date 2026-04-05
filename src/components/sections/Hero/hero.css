@@ -12,16 +12,17 @@
 .hero-title {
   display: inline-flex;
   align-items: center;
-  font-weight: 900;
+  font-weight: 600;
+  text-transform: uppercase;
   gap: 0.5rem;
 }
 
 .micro-dot {
   display: flex;
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  background: var(--accent);
 }
 
 .hero-stack {
@@ -33,7 +34,7 @@
 
 .hero-headline {
   font-size: 2rem;
-  font-weight: 800;
+  line-height: 1.3;
 }
 
 .hero-description {
@@ -44,9 +45,13 @@
 }
 
 .hero-paragraph {
-  line-height: 1.8;
+  line-height: 1.6;
   margin-bottom: 0rem;
+}
 
+.hero-sub-extra {
+  margin-top: 0.6rem;
+  line-height: 1.6;
 }
 
 /* hero right */
