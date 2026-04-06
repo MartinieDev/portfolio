@@ -8,7 +8,7 @@
 }
 
 .work-card.active-shadow {
-  box-shadow: 0 10px 30px var(--shadow);
+  box-shadow: var(--shadow);
 }
 
 .work-body {
