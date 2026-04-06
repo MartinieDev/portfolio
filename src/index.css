@@ -1,0 +1,190 @@
+@import './satoshi.css';
+
+:root {
+  --radius: 18px;
+  --max: 1120px;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  --focus: 0 0 0 4px rgba(59, 130, 246, 0.25); /* used for keyboard focus */
+}
+
+/* DARK */
+html[data-theme='dark'] {
+  --bg: #0b1220;
+  --softBg: rgba(0, 0, 0, 0.1);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-muted: rgba(163, 163, 163, 0.2);
+  --text: rgba(255, 255, 255, 0.987);
+  --muted: rgba(255, 255, 255, 0.73);
+  --availableBg: #1fbdb81b;
+  --accent: #1be2c4; 
+  /* --accent: #679e36;  */
+  --accent2: #13c6ab; 
+  /* --accent2: #60a5fa;  */
+  --navBg: rgba(11, 18, 32, 0.7);
+  --cardBg: rgba(96, 165, 250, 0.1);
+  --container-bg: #4a4b4c13;
+  --line-bg: #4eb5a6d3;
+  --shadow: #0000005a;
+  --body-bg:
+    radial-gradient(
+      900px 500px at 15% 10%,
+      color-mix(in srgb, var(--accent) 16%, transparent),
+      transparent 55%
+    ),
+    /* soft glow top right */
+    radial-gradient(
+        900px 500px at 85% 20%,
+        color-mix(in srgb, var(--accent2) 1%, transparent),
+        transparent 55%
+      ),
+    var(--bg);
+
+    
+}
+
+/* LIGHT */
+html[data-theme='light'] {
+  --bg: #f6f7fb;
+  --border: rgba(15, 23, 42, 0.1);
+  --border-muted: rgba(8, 1, 1, 0.09);
+  --text: rgba(60, 65, 78, 0.769);
+  --text-white: #f6f7fb;
+  --muted: rgb(40, 46, 58);
+  --availableBg: #0000009c;
+  --accent: #1fd68de4; 
+  --accent2: #051710e4; 
+  /* --accent2: #0ea5e9;  */
+  --navBg: rgba(219, 222, 232, 0.72);
+  --cardBg: rgba(60, 169, 219, 0.07);
+  --container-bg: #28292a17;
+  --line-bg: #116054e4;
+  --shadow: #00000045;
+  --body-bg: #28292a17;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 1rem 0;
+  font-family: 'Inter', sans-serif;
+
+  color: var(--text);
+  background: var(--body-bg);
+}
+
+/* ==============================
+  Reusables
+=============================== */
+.hero-image,
+.project-preview-image {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* modern browsers */
+
+  -webkit-touch-callout: none; /* disables long press menu on iOS */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Satoshi-Black', sans-serif;
+  /* letter-spacing: -0.05em; */
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-family: 'Satoshi-SBlack', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.section-container {
+  padding: 0 0 1rem 0;
+}
+
+.container {
+  margin: 0 0.7rem 1rem;
+  padding: 1.5rem 0.5rem 1.8rem;
+}
+
+.btn.primary {
+  font-weight: 600;
+  border: 1px solid transparent;
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  color: #000000;
+  background: var(--accent);
+}
+
+.btn.secondary {
+  font-weight: 600;
+  border: 1.5px solid var(--border);
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  color: var(--text);
+  background: var(--softBg);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.head-title {
+  position: absolute;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  bottom: -1rem;
+  left: 0.1rem;
+}
+
+.title-wrapper {
+  position: relative;
+  display: flex;
+  margin: 1.2rem 0;
+}
+
+.section-head .subtitle-muted {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text)
+}
+
+.section-divider {
+  width: 100%;
+  height: 0.1rem;
+  margin: 0.5rem 0 0rem;
+  background: linear-gradient(to right, transparent, var(--blink), transparent);
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1.8rem 0 0;
+}

@@ -1,0 +1,93 @@
+/* Container for section */
+.my-process-section {
+  position: relative;
+  padding: 2rem 1.5rem 4rem;
+  background: var(--container-bg);
+}
+
+/* Section timeline wrapper */
+.process-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.5rem 0;
+}
+
+/* Step container */
+.process-step-container {
+  display: flex;
+  align-items: flex-start; /* top aligned */
+  gap: 1rem;
+  margin: 1.5rem 0;
+  position: relative;
+  z-index: 1; /* above line segments */
+  width: 100%;
+  max-width: 600px;
+}
+
+.step-inner {
+  display: flex;
+  align-items: flex-start; /* top alignment */
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Left / Right alternation */
+.process-left .step-inner {
+  flex-direction: row;
+}
+
+.process-right .step-inner {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Number styling */
+.process-number {
+  font-family: 'satoshi', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--accent2);
+  position: relative;
+  z-index: 2;
+}
+
+/* Tag, title, description */
+.process-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.process-tag {
+  font-family: 'satoshi', sans-serif;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.process-title {
+  color: var(--line-bg);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.process-description {
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+/* Line segment connecting to next step */
+.process-line-segment {
+  position: absolute;
+  left: 50%;
+  top: 100%; /* start at bottom of step */
+  width: 2px;
+  height: 2rem;
+  background-color: var(--border);
+  z-index: 0;
+}

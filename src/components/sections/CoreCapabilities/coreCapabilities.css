@@ -1,0 +1,152 @@
+.capabilities-card {
+  position: relative;
+  margin: 2.5rem 0;
+  padding: 2.5rem 1rem 1rem;
+  border: 1px solid var(--border-muted);
+  border-radius: 1rem;
+  background: var(--body-bg);
+}
+
+.capability-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin: 0 0 1.5rem;
+}
+
+.capability-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title-indicator {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.title-indicator::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 50%;
+  inset: 0;
+  top: -2px;
+  left: -2px;
+  background: inherit;
+  filter: blur(3px);
+  opacity: 0.5;
+}
+
+.category-title {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.pill-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.capability-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  /* background: #121d1a83; */
+  background: var(--softBg);
+  padding: 0.3rem 0.6rem;
+  border: 1.5px solid var(--border-muted);
+  border-radius: 0.6rem;
+}
+
+.tool-name {
+  color: var(--text);
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.key-summary-container {
+  display: flex;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+.key-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.key-title-indicator {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.key-title {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.open-to-work-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--availableBg);
+  width: 8rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 1rem 2rem 0 5rem;
+  gap: 0.7rem;
+
+  top: 0px;
+  right: 0px;
+}
+
+.available-indicator {
+  position: relative; /* needed for ::after to position correctly */
+  width: 5px;
+  height: 5px;
+  background: #58ee07c8;
+  border-radius: 50%;
+  bottom: 3px;
+  animation: blink 2s ease-in-out infinite;
+}
+
+.available-indicator::after {
+  content: '';
+  position: absolute;
+  inset: -2px; /* expands outward equally on all sides */
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.5;
+  filter: blur(3px);
+  animation: blink 2s ease-in-out infinite; /* halo pulses with the dot */
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.otw-title {
+  font-size: 0.8rem;
+  color: var(--text-white);
+}

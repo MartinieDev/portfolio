@@ -1,0 +1,143 @@
+.work-card {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--border-muted);
+  border-radius: 1.5rem;
+  background: var(--container-bg);
+}
+
+.work-card.active-shadow {
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.work-body {
+  display: flex;
+  padding: 0 1rem 1rem;
+  gap: 0.7rem;
+}
+
+.project-header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.logo-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.8rem;
+  font-weight: 900;
+  min-width: 40px;
+  height: 47px;
+  border: 1px solid var(--border-muted);
+  border-radius: 0.7rem;
+  background:
+    radial-gradient(
+      900px 500px at 15% 10%,
+      color-mix(in srgb, var(--accent) 16%, transparent),
+      transparent 80%
+    ),
+    transparent;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.project-details-wrpper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-right: 0.2rem;
+}
+
+.project-title {
+  font-family: 'Satoshi-black', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.muted-subtitle {
+  font-family: 'Satoshi-ligh', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin: 0;
+}
+
+.muted-description {
+  font-size: 0.85rem;
+  font-weight: 200;
+  color: var(--muted);
+  margin: 0.5rem 0 1rem;
+}
+
+.tags-wrapper {
+  display: flex;
+  margin: 0.8rem 0;
+  gap: 0.6rem;
+}
+
+.tag-pill {
+  font-size: 0.7rem;
+  font-weight: 900;
+  background: var(--sectionBg);
+  padding: 0.5rem;
+  border: 1px solid var(--cardBg);
+  border-radius: 1rem;
+}
+
+.stack-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.stack-label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.stack-wrapper {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.stack-pill {
+  font-size: 0.7rem;
+  font-weight: 400;
+  background: var(--container-bg);
+  padding: 0.5rem;
+  border: 1px solid var(--cardBg);
+  border-radius: 0.8rem;
+}
+
+.project-actions {
+  display: flex;
+  align-items: center;
+
+  margin: 1.2rem 0 0;
+  gap: 1.5rem;
+}
+
+.btn.secondary.len1 {
+  padding: 0.85rem 1.05rem;
+  font-size: 0.8rem;
+}
+
+.btn.primary.len1 {
+  padding: 0.8rem 1.05rem;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,176 @@
+.nav-wrap {
+  position: relative;
+  display: sticky;
+  border: 1px solid var(--border-muted);
+  border-radius: 2rem;
+  margin: 0 0.7rem;
+  z-index: 50;
+  background: var(--navBg);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.2rem;
+}
+
+/* Git + Logo */
+.brand-container {
+  display: flex;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  gap: 0.6rem;
+}
+
+.git-icon {
+  color: var(--text);
+}
+
+.logo-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.hide-mobile {
+  display: none;
+}
+
+/* Mobile hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 1.3rem;
+  height: 1rem;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 0.08rem;
+  color: var(--text);
+  border-radius: 1rem;
+  background: var(--text);
+  transition: all 0.3s ease;
+}
+
+.hamburger.open .hamburger-top {
+  transform: rotate(45deg) translate(4px, 6px);
+}
+
+.hamburger.open .hamburger-middle {
+  opacity: 0; /* hide middle line */
+}
+
+.hamburger.open .hamburger-bottom {
+  transform: rotate(-45deg) translate(4px, -6px);
+}
+
+/* Menu */
+.menu {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  height: 0rem;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  transition: height 0.5s ease;
+  z-index: 50;
+
+  background:
+   /* soft glow top left */
+    radial-gradient(
+      400px 500px at 15% 10%,
+      color-mix(in srgb, var(--accent) 16%, transparent),
+      transparent 55%
+    ),
+    /* soft glow top right */
+    radial-gradient(
+        900px 500px at 85% 20%,
+        color-mix(in srgb, var(--accent2) 14%, transparent),
+        transparent 55%
+      ),
+    /* base color */ var(--bg);
+
+  border-left: 1px solid var(--border-muted);
+  border-right: 1px solid var(--border-muted);
+}
+
+.menu.show-menu {
+  height: 26em;
+}
+
+/* theme/mode */
+.mode-wrap {
+  position: absolute;
+  display: flex;
+  top: 1rem;
+  right: 0.8rem;
+}
+
+.mode-icon-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem;
+  border: 1px solid #a7a8a89b;
+  border-radius: 1rem;
+  gap: 0.9rem;
+  z-index: 50;
+}
+
+/* menu list */
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  margin-bottom: 3.5rem;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.menu-item a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--text);
+  transition: color 0.3s;
+}
+
+.menu-item a:hover {
+  color: var(--accent);
+}
+
+/* cv wrap */
+.cv-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+}
+
+.view-cv-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.download-cv-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.demacator-line {
+  width: 0.07rem;
+  height: 1.2rem;
+  background: #a7a8a89b;
+}
