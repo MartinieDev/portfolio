@@ -4,6 +4,7 @@ import Nav from './components/sections/Nav/Nav';
 import ProjectList from './components/sections/Projects/ProjectList';
 import TechStack from './components/sections/CoreCapabilities/CoreCapabilities';
 import MyProcess from './components/sections/MyProcess/MyProcess';
+import CTA from './components/sections/CTA/CTA';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <ProjectList />
         <About />
         <MyProcess />
+        <CTA />
       </main>
     </div>
   );

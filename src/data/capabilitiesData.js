@@ -24,7 +24,6 @@ export const capabilitiesData = [
     pillContents: [
       { title: 'React', icon: <ReactIcon size={21} /> },
       { title: 'Tailwind', icon: <TailwindIcon size={18} /> },
-      { title: 'Framer Motion', icon: <FramerIcon size={18} /> },
     ],
   },
   {
@@ -34,6 +33,7 @@ export const capabilitiesData = [
       { title: 'Git', icon: <GitIcon size={17} /> },
       { title: 'Vercel', icon: <VercelIcon size={15} /> },
       { title: 'Netlify', icon: <NetlifyIcon size={16} /> },
+      { title: 'Framer', icon: <FramerIcon size={18} /> },
     ],
   },
 ];

@@ -23,7 +23,7 @@ const GridDots = ({ rows = 10, cols = 10, size = 6, gap = 2 }) => {
             style={{
               width: `${size}px`,
               height: `${size}px`,
-              backgroundColor: isTopLeftBlock ? (isDark ? '#fff' : '#000') : '#21b87c79',
+              backgroundColor: isTopLeftBlock ? (isDark ? '#fff' : '#000') : '#13c3a977',
             }}
           />
         );

@@ -45,3 +45,22 @@ function MyProcess() {
 }
 
 export default MyProcess;
+
+
+{/* <motion.div className="about-stats">
+  {stats.map((statData, index) => (
+    <motion.div
+      className="stat-card"
+      key={index}
+      variants={statsVariants}
+    
+    >
+      <div className="stat-value">
+        {statData.value}
+        {statData.sign && <span className="sign">{statData.sign}</span>}
+      </div>
+
+      <div className="stat-label">{statData.label}</div>
+    </motion.div>
+  ))}
+</motion.div> */}

@@ -3,13 +3,6 @@ import SectionHead from '../../reusables/SectionHead';
 
 import './about.css';
 
-// const stats = [
-//   { value: '2', sign: '+', label: 'Years building' },
-//   { value: '5', sign: '+', label: 'Projects shipped' },
-//   { value: '3', sign: '+', label: 'Tech stacks' },
-//   { value: '∞', sign: '', label: 'Attention to detail' },
-// ];
-
 function About() {
   const aboutRef = useRef(null);
   const statsRef = useRef(null);
@@ -78,26 +71,6 @@ function About() {
                 My Resume
               </a>
             </div>
-
-            {/* <div className="about-right">
-              <div className="about-stats" ref={statsRef}>
-                {stats.map((statData, i) => (
-                  <div
-                    className="stat-card"
-                    key={i}
-                    style={{ transitionDelay: `${0.3 + i * 0.15}s` }}
-                  >
-                    <div className="stat-value">
-                      {statData.value}
-                      {statData.sign && (
-                        <span className="sign">{statData.sign}</span>
-                      )}
-                    </div>
-                    <div className="stat-label">{statData.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
