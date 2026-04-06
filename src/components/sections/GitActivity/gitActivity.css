@@ -1,0 +1,115 @@
+.git-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem 4rem;
+  gap: 2.5rem;
+}
+
+.graph-scroll {
+  overflow-x: auto;
+  padding-bottom: 4px;
+  width: 100%;
+}
+
+.graph-inner {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: max-content; /* ← key fix */
+}
+
+.month-row {
+  display: flex;
+  flex-direction: row; /* ← explicit */
+  margin-bottom: 4px;
+}
+
+.graph-body {
+  display: flex;
+  flex-direction: row; /* ← explicit */
+  gap: 4px;
+}
+
+.cells-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+}
+
+.week-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.git-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 1.5rem 2rem;
+  background-color: var(--softBg);
+  overflow-x: hidden;
+}
+
+/* contribution graph */
+.card-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 300;
+  gap: 0.4rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.card-title span {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.graph-total-number,
+.git-username {
+  color: var(--git-link);
+  font-weight: 500;
+  font-size: 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.git-username {
+  transition: all 0.2s ease;
+}
+
+.git-username:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.graph-header {
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 1rem;
+}
+
+.month-label {
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 0.7rem;
+}
+
+.day-label {
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 0.7rem;
+}
