@@ -2,6 +2,7 @@
   margin: 1rem 0;
   padding: 2.5rem 1.5rem 3.5rem;
   border-top: 1px solid var(--border-muted);
+
   /* border-bottom: 1px solid var(--border-muted); */
   /* border-top-right-radius: 2rem;
   border-bottom-left-radius: 2rem; */
@@ -19,6 +20,10 @@
   flex-direction: column;
   gap: 1px;
   margin: 2rem 0rem;
+}
+
+.about-body {
+  margin-top: 3rem;
 }
 
 /* Initially move all <p> down by 80px, then bring them back to their original position (0) when visible.” */
@@ -48,5 +53,3 @@
   color: var(--text);
   font-weight: 600;
 }
-
-

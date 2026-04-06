@@ -42,14 +42,36 @@ function GitActivity() {
     >
       <SectionHead
         TagLevel="h2"
-        title="Always building."
-        subtitle="A honest look at my GitHub activity — every cell is a real commit."
+        title="Contributions"
+        subtitle="Every square is a commit. Every commit is a progress."
       />
 
       <div className="git-card">
         {loading && <p className="git-state">Loading activity...</p>}
         {error && <p className="git-state git-error">{error}</p>}
         {!loading && !error && <ContributionGraph weeks={weeks} />}
+      </div>
+
+      <div className="git-footer">
+        <div className="git-footer-content">
+          <div className="git-footer-text-wrapper">
+            <p className="git-footer-que">Got a project in mind?</p>
+
+            <p className="git-footer-text">
+              Whether it’s a product, a freelance build, or a growing team, I’m
+              open to the right opportunity.
+            </p>
+          </div>
+
+          <a
+            href="https://github.com/Martins-Jay?tab=repositories"
+            target="_blank"
+            rel="noreferrer"
+            className="git-btn btn primary"
+          >
+            Let's talk
+          </a>
+        </div>
       </div>
     </motion.section>
   );

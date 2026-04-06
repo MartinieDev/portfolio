@@ -2,7 +2,7 @@ export const gitData = {
   LEVEL_COLORS: [
     '#5d575741',
     '#113c22',
-    '#19512d',
+    '#236f3e',
     '#28a756',
     '#4ade80',
   ],

@@ -23,6 +23,7 @@ function Nav({ theme = 'dark' }) {
       { label: 'Projects', href: '#projects', id: 'projects' },
       { label: 'About me', href: '#about', id: 'about' },
       { label: 'My Process', href: '#my-process', id: 'my-process' },
+      { label: 'Activity', href: '#git-activity', id: 'git-activity' },
       { label: 'Collaborate', href: '#cta', id: 'cta' },
     ],
     [],

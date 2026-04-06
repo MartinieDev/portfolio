@@ -3,6 +3,8 @@
   flex-direction: column;
   padding: 2rem 1.5rem 4rem;
   gap: 2.5rem;
+  height: 100vh;
+  border-bottom: 1.5px solid var(--border);
 }
 
 .graph-scroll {
@@ -32,13 +34,13 @@
 .cells-grid {
   display: flex;
   flex-direction: row;
-  gap: 3px;
+  gap: 4px;
 }
 
 .week-col {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
 }
 
 .git-card {
@@ -66,7 +68,7 @@
   display: flex;
   align-items: center;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 300;
   gap: 0.4rem;
   font-family: 'JetBrains Mono', monospace;
@@ -81,12 +83,8 @@
 .git-username {
   color: var(--git-link);
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-family: 'JetBrains Mono', monospace;
-}
-
-.git-username {
-  transition: all 0.2s ease;
 }
 
 .git-username:hover {
@@ -112,4 +110,42 @@
   color: var(--muted);
   font-weight: 300;
   font-size: 0.7rem;
+}
+
+.graph-tooltip {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.git-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.git-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.git-footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.git-footer-content a {
+  width: 8rem;
+}
+
+.git-footer-que {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.git-footer-text {
+  font-size: 0.9rem;
+  color: var(--muted);
 }

@@ -46,7 +46,7 @@ function ContributionGraph({ weeks }) {
   const gap = 3;
 
   return (
-    <div className="graph-wrapper" style={{width: '100%'}}>
+    <div className="graph-wrapper" style={{ width: '100%' }}>
       {/* Title */}
       <div className="card-title-container">
         <p className="card-title">
@@ -72,7 +72,7 @@ function ContributionGraph({ weeks }) {
 
       {/* Graph */}
       <div className="graph-scroll">
-        <div className="graph-inner">
+        <div className="graph-inner" style={{ padding: '1rem' }}>
           {/* Month labels */}
           <div className="month-row">
             <div style={{ width: 30 }} />
@@ -82,7 +82,7 @@ function ContributionGraph({ weeks }) {
                 <div
                   key={wi}
                   className="month-label"
-                  style={{ width: cellSize + gap }}
+                  style={{ width: cellSize + gap, paddingBottom: '.3rem' }}
                 >
                   {label ? label.label : ''}
                 </div>
@@ -98,7 +98,7 @@ function ContributionGraph({ weeks }) {
                   <div
                     key={d}
                     className="day-label"
-                    style={{ height: cellSize + gap }}
+                    style={{ height: cellSize + gap, paddingRight: '.3rem' }}
                   >
                     {d}
                   </div>
@@ -156,7 +156,7 @@ function ContributionGraph({ weeks }) {
           className="graph-tooltip"
           style={{ left: tooltip.x + 12, top: tooltip.y - 36 }}
         >
-          <strong>{tooltip.count} contributions</strong> · {tooltip.date}
+          <strong>{`${tooltip.count} ${tooltip.count < 2 ? 'contribution' : 'contributions'}`} </strong> · {tooltip.date}
         </div>
       )}
     </div>
