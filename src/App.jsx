@@ -8,11 +8,15 @@ import CTA from './components/sections/CTA/CTA';
 import GitActivity from './components/sections/GitActivity/GitActivity';
 import Footer from './components/sections/Footer/Footer';
 
+import useTheme from './components/hooks/useTheme';
+
 function App() {
+  const { theme, setTheme } = useTheme();
+
   return (
     <div className="app">
       <main>
-        <Nav />
+        <Nav theme={theme} setTheme={setTheme} />
         <Hero />
         <TechStack />
         <ProjectList />

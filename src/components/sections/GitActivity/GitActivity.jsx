@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchContributions } from '../../hooks/fetchContributions';
+import { fetchContributions } from '../../../fetchContributions';
 import { motion } from 'framer-motion';
 import ContributionGraph from './ContributionGraph/ContributionGraph';
 import SectionHead from '../../reusables/SectionHead';

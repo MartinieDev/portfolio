@@ -35,9 +35,9 @@ function Footer() {
 
         <div className="bottom-closure-wrapper">
           <span> JavaScript</span>
-          <span>· </span>
-          <span> React </span>
-          <span>· </span>
+          <span>·</span>
+          <span> React</span>
+          <span>·</span>
           <span>Framer Motion</span>
         </div>
       </div>

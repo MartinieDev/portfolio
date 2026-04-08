@@ -8,7 +8,7 @@ import ReadCvIcon from '../../../assets/icons/ReadCvIcon';
 
 import './nav.css';
 
-function Nav({ theme = 'dark' }) {
+function Nav({ theme, setTheme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef(null);
 
@@ -35,7 +35,7 @@ function Nav({ theme = 'dark' }) {
       const navEl = navRef.current;
 
       // navEl does not contain clickedEl ? close
-      if (!navEl.contains(clickedEl)) {
+      if (navEl && !navEl.contains(clickedEl)) {
         setIsMenuOpen(false);
       }
     }
@@ -102,16 +102,25 @@ function Nav({ theme = 'dark' }) {
           {/* Mode toggle (mobile) */}
           <div className="mode-wrap">
             <div className="mode-icon-wrap">
-              <MoonIcon size={21} />
-              <SunIcon size={21} />
+              <div
+                className={`mode-indicator ${theme === 'light' ? 'indicator-light' : 'indicator-dark'}`}
+              />
+
+              <div className="moon-icon" onClick={() => setTheme('dark')}>
+                <MoonIcon size={21} />
+              </div>
+
+              <div className="sun-icon" onClick={() => setTheme('light')}>
+                <SunIcon size={21} />
+              </div>
             </div>
           </div>
 
           {/* Menu links */}
           <ul className="menu-list">
             {links.map((linkObj) => (
-              <li>
-                <a href={linkObj.href} key={linkObj.id} className={`nav-link `}>
+              <li key={linkObj.id}>
+                <a href={linkObj.href} className={`nav-link `}>
                   {linkObj.label}
                 </a>
               </li>

@@ -53,7 +53,8 @@
   box-shadow: var(--shadow);
   padding: 1.5rem 2rem;
   background-color: var(--softBg);
-  overflow-x: hidden;
+  overflow: hidden;
+  margin: 2rem 0;
 }
 
 /* contribution graph */
@@ -126,6 +127,10 @@
 .git-btn {
   display: flex;
   justify-content: center;
+}
+
+.git-footer{
+
 }
 
 .git-footer-content {

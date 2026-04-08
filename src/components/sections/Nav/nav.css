@@ -126,6 +126,27 @@
   z-index: 50;
 }
 
+.mode-indicator {
+  position: absolute;
+  top: 0.1rem;
+  left: 0.2rem;
+  width: calc(100% - 0.4rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #747a774c;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mode-indicator.indicator-dark {
+  transform: translateY(.2rem);
+}
+
+.mode-indicator.indicator-light {
+  transform: translateY(calc(100% + 0.9rem));
+}
+
+
 /* menu list */
 .menu-list {
   list-style: none;

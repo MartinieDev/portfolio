@@ -3,7 +3,6 @@
 :root {
   --radius: 18px;
   --max: 1120px;
-
   --focus: 0 0 0 4px rgba(59, 130, 246, 0.25); /* used for keyboard focus */
 }
 
@@ -50,8 +49,7 @@ html[data-theme='dark'] {
   --availableBg: #1fbdb81b;
   --accent: #0affda;
   --accent2: #13c6ab;
-  /* --accent2: #60a5fa;  */
-  --navBg: rgba(36, 36, 37, 0.7);
+  --navBg: rgba(18, 18, 18, 0.7);
   --cardBg: rgba(96, 165, 250, 0.1);
   --container-bg: #7b7c7e13;
   --line-bg: #4eb5a6d3;
@@ -98,8 +96,7 @@ html[data-theme='light'] {
   --availableBg: #0000009c;
   --accent: #1fd68de4;
   --accent2: #0517109b;
-  --accent3: #0ea5e9;
-  --navBg: rgba(219, 222, 232, 0.72);
+  --navBg: #e9e7e7fa;
   --cardBg: rgba(60, 169, 219, 0.07);
   --container-bg: #1e1f1f21;
   --line-bg: #0a3831e4;
