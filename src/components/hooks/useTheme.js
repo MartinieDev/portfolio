@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const THEME_KEY = 'theme';
 
 export default function useTheme() {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem(THEME_KEY);
+    return localStorage.getItem(THEME_KEY) || 'dark';
   });
 
   function applyTheme(theme) {
@@ -17,7 +17,5 @@ export default function useTheme() {
     localStorage.setItem(THEME_KEY, theme);
   }, [theme]);
 
-  return {theme, setTheme}
+  return { theme, setTheme };
 }
-
-
