@@ -1,0 +1,87 @@
+.footer-section {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  height: 85vh;
+  padding: 4rem 1.5rem;
+  background-color: var(--body-bg);
+  color: var(--text);
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-section::after {
+  content: '';
+  display: block;
+  height: 250px;
+}
+
+.footer-header h2 {
+  font-size: 2.1rem;
+  line-height: 2.2rem;
+}
+
+.footer-body-text {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+/* Contact Item */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.contact-item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--softBg);
+  padding: 0.7rem;
+  border-radius: 10rem;
+}
+
+.contact-desc p,
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+.footer-closure-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.top-closure-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.top-closure-wrapper span {
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.bottom-closure-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.bottom-closure-wrapper span {
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: var(--muted);
+  color: #525151fe;
+}

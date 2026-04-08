@@ -37,7 +37,7 @@ function CTA() {
     <motion.section id="cta" className="cta-section">
       <div className="cta-title">
         <SectionHead TagLevel="h2" title="Built to ship." />
-        <h2 className="ready-title">
+        <h2 className="color-text">
           Ready to <br /> <span>collaborate.</span>
         </h2>
       </div>

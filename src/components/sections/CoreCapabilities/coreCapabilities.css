@@ -1,3 +1,9 @@
+.capabilities-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .capabilities-card {
   position: relative;
   margin: 2.5rem 0;

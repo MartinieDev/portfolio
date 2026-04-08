@@ -146,6 +146,7 @@
 }
 
 .git-footer-text {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 300;
   color: var(--muted);
 }

@@ -22,61 +22,59 @@ function CoreCapabilities() {
   };
 
   return (
-    <div
+    <section
       id="core-capabilities"
       className="capabilities-section container"
       initial="hidden"
       animate="visible"
     >
-      <div>
-        <SectionHead
-          title="Core Capabilities"
-          TagLevel="h2"
-          subtitle="Technologies, frameworks, and tools I use to design and build."
-        />
+      <SectionHead
+        title="Core Capabilities"
+        TagLevel="h2"
+        subtitle="Technologies, frameworks, and tools I use to design and build."
+      />
 
-        <motion.div
-          className="capabilities-card"
-          ref={containerRef}
-          variants={cardVariants}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
-          whileHover={{ scale: 1.02 }}
-        >
-          <div className="open-to-work-wrapper">
-            <div className="available-indicator"></div>
+      <motion.div
+        className="capabilities-card"
+        ref={containerRef}
+        variants={cardVariants}
+        initial="hidden"
+        animate={isInView ? 'visible' : 'hidden'}
+        whileHover={{ scale: 1.02 }}
+      >
+        <div className="open-to-work-wrapper">
+          <div className="available-indicator"></div>
 
-            <p className="otw-title">Open to work</p>
+          <p className="otw-title">Open to work</p>
+        </div>
+
+        {capabilitiesData.map((capabilitiyObj) => (
+          <CapabilityGroup
+            key={capabilitiyObj.title}
+            capabilitiyObj={capabilitiyObj}
+          />
+        ))}
+
+        <div className="section-divider"></div>
+
+        <div className="bottom-container">
+          <div className="key-summary-container">
+            {capabilitiesData.map((capabilitiyObj) => (
+              <div className="key-wrapper">
+                <div
+                  className="key-title-indicator"
+                  style={{
+                    background: capabilitiyObj.indicatorColor,
+                  }}
+                ></div>
+
+                <div className="key-title">{capabilitiyObj.title}</div>
+              </div>
+            ))}
           </div>
-
-          {capabilitiesData.map((capabilitiyObj) => (
-            <CapabilityGroup
-              key={capabilitiyObj.title}
-              capabilitiyObj={capabilitiyObj}
-            />
-          ))}
-
-          <div className="section-divider"></div>
-
-          <div className="bottom-container">
-            <div className="key-summary-container">
-              {capabilitiesData.map((capabilitiyObj) => (
-                <div className="key-wrapper">
-                  <div
-                    className="key-title-indicator"
-                    style={{
-                      background: capabilitiyObj.indicatorColor,
-                    }}
-                  ></div>
-
-                  <div className="key-title">{capabilitiyObj.title}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>
+        </div>
+      </motion.div>
+    </section>
   );
 }
 

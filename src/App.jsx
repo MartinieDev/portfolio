@@ -6,13 +6,13 @@ import TechStack from './components/sections/CoreCapabilities/CoreCapabilities';
 import MyProcess from './components/sections/MyProcess/MyProcess';
 import CTA from './components/sections/CTA/CTA';
 import GitActivity from './components/sections/GitActivity/GitActivity';
+import Footer from './components/sections/Footer/Footer';
 
 function App() {
   return (
     <div className="app">
-      <Nav />
-
       <main>
+        <Nav />
         <Hero />
         <TechStack />
         <ProjectList />
@@ -21,6 +21,8 @@ function App() {
         <GitActivity />
         <CTA />
       </main>
+
+      <Footer />
     </div>
   );
 }

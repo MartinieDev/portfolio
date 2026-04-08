@@ -1,4 +1,4 @@
-.project-list-wrap {
+.project-list-section {
   display: flex;
   flex-direction: column;
   gap: 3rem;
