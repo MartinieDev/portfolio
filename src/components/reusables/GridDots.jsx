@@ -1,5 +1,7 @@
-const GridDots = ({ rows = 10, cols = 10, size = 6, gap = 2 }) => {
+const GridDots = ({ rows = 10, cols = 10, size = 7, gap = 4 }) => {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+
+  console.log(isDark);
 
   return (
     <div
@@ -15,7 +17,7 @@ const GridDots = ({ rows = 10, cols = 10, size = 6, gap = 2 }) => {
         const col = idx % cols;
 
         // Check if dot is inside the top-left 2x2 square
-        const isTopLeftBlock = row < 2 && col < 2;
+        const isTopLeftBlock = row < 3 && col < 3;
 
         return (
           <div
@@ -23,7 +25,7 @@ const GridDots = ({ rows = 10, cols = 10, size = 6, gap = 2 }) => {
             style={{
               width: `${size}px`,
               height: `${size}px`,
-              backgroundColor: isTopLeftBlock ? (isDark ? '#fff' : '#000') : '#13c3a977',
+              backgroundColor: isTopLeftBlock ? (isDark ? '#ffffff' : '#545151') : '#0caa9285',
             }}
           />
         );

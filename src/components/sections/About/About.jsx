@@ -1,34 +1,41 @@
-import { useEffect, useRef } from 'react';
 import SectionHead from '../../reusables/SectionHead';
+import { motion } from 'framer-motion';
 
 import './about.css';
+import DownloadIcon from '../../../assets/icons/DownloadIcon';
+
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+    y: 90,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeOut',
+    },
+  },
+};
+
+function scrollToContact() {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'smooth',
+  });
+}
 
 function About() {
-  const aboutRef = useRef(null);
-  const statsRef = useRef(null);
-
-  useEffect(function () {
-    const observerOptions = {
-      root: null,
-      threshold: 0.1,
-    };
-
-    const observerCB = function (e) {
-      e.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(observerCB, observerOptions);
-
-    if (aboutRef.current) observer.observe(aboutRef.current);
-    if (statsRef.current) observer.observe(statsRef.current);
-  }, []);
-
   return (
-    <section id="about" className="about-section container">
+    <motion.section
+      id="about"
+      className="about-section"
+      variants={containerVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.4 }}
+    >
       <SectionHead
         title="About"
         subtitle="Engineer by Training. Developer by Choice"
@@ -57,22 +64,23 @@ function About() {
           </div>
 
           <div className="hero-actions" style={{ margin: '1rem 0' }}>
-            <a className="btn primary" href="#contact">
-              Get In Touch
-            </a>
+            <button className="btn primary" onClick={scrollToContact}>
+              <span>Get In Touch</span>
+            </button>
 
-            <a
-              className="btn secondary"
-              href="https://drive.google.com/file/d/1420BUUvPp1ksRlgv1rJubHyXqfhzdBhL/view?usp=drive_link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              My Resume
-            </a>
+            <button className="btn secondary">
+              <a href="https://drive.google.com/file/d/1vAHn8bCuyYqAQX-kxI6qSyzTLBY_jipr/view?usp=drivesdk">
+                My Resume
+              </a>
+
+              <div className="icon-wrapper">
+                <DownloadIcon size={19} />
+              </div>
+            </button>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

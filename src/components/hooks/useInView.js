@@ -11,9 +11,11 @@ export default function useInView(observerOptions = {}, allowToggle = true) {
 
         if (entry.isIntersecting) {
           setIsInView(true); // card has entered the viewport → set state to true & wait until it leaves
-        } else if (allowToggle) {
-          setIsInView(false); // card has left the viewport → set state to false and wait until it re-enters
-        }
+        } 
+        
+        // else if (allowToggle) {
+        //   setIsInView(false); // card has left the viewport → set state to false and wait until it re-enters
+        // }
       };
 
       const defaultOptions = {

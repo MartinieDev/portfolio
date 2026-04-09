@@ -1,9 +1,48 @@
 import { useState, useEffect } from 'react';
-import { fetchContributions } from '../../../fetchContributions';
+import { fetchContributions } from './fetchContributions';
 import { motion } from 'framer-motion';
 import ContributionGraph from './ContributionGraph/ContributionGraph';
 import SectionHead from '../../reusables/SectionHead';
 import './gitActivity.css';
+import ArrowRightIcon from '../../../assets/icons/techIcons/ArrowRight';
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    y: 160,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const footerVariant = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.5,
+      duration: 0.5,
+      ease: 'easeOut',
+    },
+  },
+};
+
+function scrollToContact() {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behaviour: 'smooth',
+  });
+}
 
 function GitActivity() {
   const [weeks, setWeeks] = useState([]);
@@ -35,10 +74,10 @@ function GitActivity() {
     <motion.section
       id="git-activity"
       className="git-section"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
     >
       <SectionHead
         TagLevel="h2"
@@ -52,7 +91,13 @@ function GitActivity() {
         {!loading && !error && <ContributionGraph weeks={weeks} />}
       </div>
 
-      <div className="git-footer">
+      <motion.div
+        className="git-footer"
+        variants={footerVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="git-footer-content">
           <div className="git-footer-text-wrapper">
             <p className="git-footer-que">Got a project in mind?</p>
@@ -63,16 +108,21 @@ function GitActivity() {
             </p>
           </div>
 
-          <a
+          <button
             href="https://github.com/Martins-Jay?tab=repositories"
             target="_blank"
             rel="noreferrer"
             className="git-btn btn primary"
+            onClick={scrollToContact}
           >
-            Let's talk
-          </a>
+            <span>Let's talk</span>
+
+            <div className="icon-wrapper">
+              <ArrowRightIcon />
+            </div>
+          </button>
         </div>
-      </div>
+      </motion.div>
     </motion.section>
   );
 }

@@ -4,15 +4,14 @@
   flex-direction: column;
   background-color: var(--container-bg);
   height: 100vh;
-  padding: 2rem 1.5rem 4rem;
+  padding: 4rem 1.5rem 2rem;
   gap: 2.5rem;
-
+  isolation: isolate;
 }
 
 .cta-title {
   line-height: 2.2rem;
 }
-
 
 .ready-title span {
   color: var(--accent);
@@ -44,14 +43,14 @@
 .stat-value {
   font-family: 'Satoshi-Black', sans-serif;
   position: relative;
-  color: var(--accent);
+  color: var(--cta-color);
   font-size: 1.7rem;
   font-weight: 600;
 }
 
 .stat-value .sign {
   position: absolute;
-  color: var(--accent);
+  color: var(--cta-color);
   font-size: 1.5rem;
   font-weight: 900;
   padding: 0 0.1rem;

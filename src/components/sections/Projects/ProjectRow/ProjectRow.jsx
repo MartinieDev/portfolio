@@ -7,7 +7,7 @@ import './projectRow.css';
 const ProjectVariants = {
   hidden: {
     opacity: 0,
-    y: 20,
+    y: 40,
     filter: 'blur(4px)',
   },
   visible: {

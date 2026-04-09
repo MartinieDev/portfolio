@@ -5,34 +5,40 @@ import LayoutIcon from '../../../assets/icons/LayoutIcon';
 import ReactIcon from '../../../assets/icons/ReactIcon';
 
 import './hero.css';
+import ArrowRightIcon from '../../../assets/icons/techIcons/ArrowRight';
 
 function Hero() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
-  // Framer variants
   const containerVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.15, // delay between each child
-        delayChildren: 0.3, // delay before first child
+        staggerChildren: 0.15,
+        delayChildren: 0.3,
       },
     },
   };
+
   const itemVariants = {
-    hidden: {
-      opacity: 0,
-      y: 15,
-    },
+    hidden: { opacity: 0, y: 15 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
-      },
+      transition: { duration: 0.6, ease: 'easeOut' },
     },
   };
+
+  function scrollToProjects() {
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function scrollToContact() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    });
+  }
 
   return (
     <motion.section
@@ -42,7 +48,6 @@ function Hero() {
       initial="hidden"
       animate="visible"
     >
-      {/* LEFT CONTENT */}
       <div className="hero-content">
         <motion.p className="hero-title" variants={itemVariants}>
           <span className="micro-dot" />
@@ -53,7 +58,7 @@ function Hero() {
           Engineering Thoughtful Digital Experiences
         </motion.h1>
 
-        <div className="hero-description" variants={itemVariants}>
+        <div className="hero-description">
           <motion.p className="hero-paragraph" variants={itemVariants}>
             Engineering is about solving problems with precision.
           </motion.p>
@@ -67,29 +72,19 @@ function Hero() {
         </div>
 
         <motion.div className="hero-actions" variants={itemVariants}>
-          <a
-            className="btn primary"
-            href="#projects"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.85 }}
-            transition={{ type: 'spring', stiffness: 300 }}
-          >
+          <button className="btn primary" onClick={scrollToProjects}>
             See My Works
-          </a>
+          </button>
 
-          <a
-            className="btn secondary"
-            href="#contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.85 }}
-            transition={{ type: 'spring', stiffness: 300 }}
-          >
-            Get In Touch
-          </a>
+          <button className="btn secondary" onClick={scrollToContact}>
+            <span>Get In Touch</span>
+            <div className="icon-wrapper">
+              <ArrowRightIcon size={17} />
+            </div>
+          </button>
         </motion.div>
       </div>
 
-      {/* RIGHT IMAGE */}
       <motion.div
         className="hero-right"
         aria-hidden="false"
@@ -108,18 +103,15 @@ function Hero() {
 
           <div className="my-info-data">
             <p className="card-name">Martins Nnaukwu</p>
-
             <div className="role-list">
               <span className="role-item">
                 <CodeIcon size={18} />
                 Frontend Developer
               </span>
-
               <span className="role-item">
                 <ReactIcon size={18} />
                 React
               </span>
-
               <span className="role-item">
                 <LayoutIcon size={18} />
                 UI Engineering

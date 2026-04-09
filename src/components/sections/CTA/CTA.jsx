@@ -34,7 +34,7 @@ const rightVariants = {
 
 function CTA() {
   return (
-    <motion.section id="cta" className="cta-section">
+    <section id="cta" className="cta-section">
       <div className="cta-title">
         <SectionHead TagLevel="h2" title="Built to ship." />
         <h2 className="color-text">
@@ -110,7 +110,7 @@ function CTA() {
           
         </div>
       </motion.section>
-    </motion.section>
+    </section>
   );
 }
 

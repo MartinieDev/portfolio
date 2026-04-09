@@ -23,8 +23,9 @@ function Nav({ theme, setTheme }) {
       { label: 'Projects', href: '#projects', id: 'projects' },
       { label: 'About me', href: '#about', id: 'about' },
       { label: 'My Process', href: '#my-process', id: 'my-process' },
-      { label: 'Activity', href: '#git-activity', id: 'git-activity' },
-      { label: 'Collaborate', href: '#cta', id: 'cta' },
+      { label: 'Git Activity', href: '#git-activity', id: 'git-activity' },
+      { label: 'CTA', href: '#cta', id: 'cta' },
+
     ],
     [],
   );
@@ -52,6 +53,10 @@ function Nav({ theme, setTheme }) {
     setIsMenuOpen((prev) => !prev);
   }
 
+  function handleLinkSelect() {
+    setIsMenuOpen(false)
+  }
+
   return (
     <header className="nav-wrap">
       <div className="nav" ref={navRef}>
@@ -77,14 +82,14 @@ function Nav({ theme, setTheme }) {
             )}
           </div>
 
-          <a
-            href="https://drive.google.com/file/d/1420BUUvPp1ksRlgv1rJubHyXqfhzdBhL/view?usp=drive_link"
+          <button
+            href="https://drive.google.com/file/d/1mDG3Eqml6B46pI2y28T2RR5Mr1bdBu4b/view?usp=drivesdk"
             className="cv-download-btn hide-mobile"
             target="_blank"
             rel="noreferrer"
           >
             Resume
-          </a>
+          </button>
 
           {/* Mobile hamburger btn */}
           <button
@@ -120,7 +125,7 @@ function Nav({ theme, setTheme }) {
           <ul className="menu-list">
             {links.map((linkObj) => (
               <li key={linkObj.id}>
-                <a href={linkObj.href} className={`nav-link `}>
+                <a href={linkObj.href} className={`nav-link `} onClick={handleLinkSelect}>
                   {linkObj.label}
                 </a>
               </li>
@@ -132,9 +137,7 @@ function Nav({ theme, setTheme }) {
             <div className="view-cv-icon">
               <ReadCvIcon size={21} />
 
-              <a href="/cv/Nnaukwu_Martins_Frontend_Developer.pdf">
-                View my CV
-              </a>
+              <a href="/cv/Nnaukwu_Martins_Resume.pdf">View my CV</a>
             </div>
 
             <div className="demacator-line"></div>
@@ -142,7 +145,7 @@ function Nav({ theme, setTheme }) {
             <div className="download-cv-icon">
               <DownloadIcon size={21} />
 
-              <a href="https://drive.google.com/file/d/1420BUUvPp1ksRlgv1rJubHyXqfhzdBhL/view?usp=drive_link">
+              <a href="https://drive.google.com/file/d/1vAHn8bCuyYqAQX-kxI6qSyzTLBY_jipr/view?usp=drivesdk">
                 Downlaod CV
               </a>
             </div>

@@ -54,7 +54,7 @@ function ContributionGraph({ weeks }) {
         </p>
 
         <p>
-          <a href="https://github.com/Martins-Jay" className="git-username">
+          <a href="https://github.com/martiniedev" className="git-username">
             @Martins-Jay
           </a>
         </p>

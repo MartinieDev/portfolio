@@ -74,11 +74,8 @@
   aspect-ratio: 1.2 / 1.33;
   object-position: 50% -10%;
   object-fit: cover;
-  background: radial-gradient(
-    circle,
-    color-mix(in srgb, var(--accent) 20%, transparent),
-    transparent 80%
-  );
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
 
   filter: blur(10px);
   transform: scale(0.97);
@@ -119,3 +116,5 @@
   font-size: 0.8rem;
   color: var(--muted);
 }
+
+

@@ -6,7 +6,7 @@ import ProjectRow from './ProjectRow/ProjectRow';
 
 function ProjectList() {
   return (
-    <section id="projects" className="project-list-section container">
+    <section id="projects" className="project-list-section">
       <SectionHead
         TagLevel="h2"
         title="Projects"

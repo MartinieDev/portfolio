@@ -24,7 +24,7 @@ function CoreCapabilities() {
   return (
     <section
       id="core-capabilities"
-      className="capabilities-section container"
+      className="capabilities-section"
       initial="hidden"
       animate="visible"
     >

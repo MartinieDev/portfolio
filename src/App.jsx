@@ -6,7 +6,8 @@ import TechStack from './components/sections/CoreCapabilities/CoreCapabilities';
 import MyProcess from './components/sections/MyProcess/MyProcess';
 import CTA from './components/sections/CTA/CTA';
 import GitActivity from './components/sections/GitActivity/GitActivity';
-import Footer from './components/sections/Footer/Footer';
+import Contact from './components/sections/Contact/Contact';
+
 
 import useTheme from './components/hooks/useTheme';
 
@@ -26,7 +27,7 @@ function App() {
         <CTA />
       </main>
 
-      <Footer />
+      <Contact />
     </div>
   );
 }

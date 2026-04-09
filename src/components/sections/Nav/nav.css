@@ -1,11 +1,13 @@
 .nav-wrap {
-  position: relative;
+  position: sticky;
+  top: 1rem;
   display: sticky;
   border: 1px solid var(--border-muted);
   border-radius: 2rem;
   margin: 0 0.7rem;
   z-index: 50;
   background: var(--navBg);
+  backdrop-filter: blur(8px);
 }
 
 .nav {
@@ -76,13 +78,13 @@
 /* Menu */
 .menu {
   position: absolute;
-  top: 4rem;
+  top: 3rem;
   left: 0;
   width: 100%;
   height: 0rem;
   overflow: hidden;
   border-radius: 1.5rem;
-  transition: height 0.5s ease;
+  transition: height 0.2s ease;
   z-index: 50;
 
   background:
@@ -139,13 +141,12 @@
 }
 
 .mode-indicator.indicator-dark {
-  transform: translateY(.2rem);
+  transform: translateY(0.2rem);
 }
 
 .mode-indicator.indicator-light {
   transform: translateY(calc(100% + 0.9rem));
 }
-
 
 /* menu list */
 .menu-list {
@@ -175,7 +176,7 @@
   align-items: center;
   justify-content: center;
 
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .view-cv-icon {

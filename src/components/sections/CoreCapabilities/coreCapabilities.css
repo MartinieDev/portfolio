@@ -1,16 +1,16 @@
 .capabilities-section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  padding: 4rem 1.5rem 5rem;
 }
 
 .capabilities-card {
   position: relative;
-  margin: 2.5rem 0;
+  margin: 2rem 0;
   padding: 2.5rem 1rem 1rem;
-  border: 1px solid var(--border-muted);
   border-radius: 1rem;
-  background: var(--body-bg);
+  background: var(--cardBg);
 }
 
 .capability-group {
