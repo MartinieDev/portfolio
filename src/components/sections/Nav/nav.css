@@ -1,3 +1,6 @@
+/* ==============================
+  Nav Wrapper — sticky pill
+=============================== */
 .nav-wrap {
   position: sticky;
   top: 1rem;
@@ -10,23 +13,34 @@
   backdrop-filter: blur(8px);
 }
 
+/* ==============================
+  Nav Inner — pill shape
+=============================== */
 .nav {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1.2rem;
+  max-width: var(--max);
+  margin: 0 auto;
 }
 
-/* Git + Logo */
+/* ==============================
+  Brand / Logo
+=============================== */
 .brand-container {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
   width: 2rem;
   height: 2rem;
   gap: 0.6rem;
 }
 
 .git-icon {
+  display: flex;
   color: var(--text);
 }
 
@@ -36,11 +50,42 @@
   color: var(--text);
 }
 
+/* ===================================
+  Desktop Inline Links — hidden mobile
+==================================== */
+.desktop-links {
+  display: none;
+}
+
+.sun-toggle,
+.moon-toggle {
+  display: flex;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--border-muted);
+  border-radius: 1rem;
+  background-color: var(--softBg);
+  color: var(--text);
+}
+
+/* ==============================
+  Nav Right Controls
+=============================== */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Desktop-only slots hidden on mobile */
 .hide-mobile {
   display: none;
 }
 
-/* Mobile hamburger */
+/* ==============================
+  Hamburger — mobile only
+=============================== */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -75,10 +120,12 @@
   transform: rotate(-45deg) translate(4px, -6px);
 }
 
-/* Menu */
+/* ==============================
+  Mobile Dropdown Menu
+=============================== */
 .menu {
   position: absolute;
-  top: 3rem;
+  top: 3.3rem;
   left: 0;
   width: 100%;
   height: 0rem;
@@ -110,11 +157,13 @@
   height: 26em;
 }
 
-/* theme/mode */
+/* ==============================
+  Theme Toggle — inside mobile menu
+=============================== */
 .mode-wrap {
   position: absolute;
   display: flex;
-  top: 1rem;
+  top: 1.7rem;
   right: 0.8rem;
 }
 
@@ -148,51 +197,280 @@
   transform: translateY(calc(100% + 0.9rem));
 }
 
-/* menu list */
+/* ==============================
+  Mobile Menu Links
+=============================== */
 .menu-list {
   list-style: none;
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
-  margin-bottom: 3.5rem;
   gap: 1.5rem;
   text-align: center;
+  margin-bottom: 2.3rem;
 }
 
 .menu-item a {
   text-decoration: none;
   font-size: 1.5rem;
   color: var(--text);
-  transition: color 0.3s;
+}
+
+.nav-link-wrapper {
+  font-size: 1rem;
+  font-weight: 300;
+  transition: all 0.15s ease;
+}
+
+.nav-container-margin {
+  padding: 0.8rem;
 }
 
 .menu-item a:hover {
   color: var(--accent);
 }
 
-/* cv wrap */
+/* ==============================
+  Mobile CV Links Row
+=============================== */
 .cv-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 2.5rem;
+}
+
+.demacator-line {
+  width: 1px;
+  height: 1.5rem;
+  background-color: var(--muted);
 }
 
 .view-cv-icon {
   display: flex;
   align-items: center;
   gap: 0.2rem;
+  font-weight: 300;
 }
 
 .download-cv-icon {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  font-weight: 300;
 }
 
-.demacator-line {
-  width: 0.07rem;
-  height: 1.2rem;
-  background: #a7a8a89b;
+/* ==============================
+  md+ — 768px
+=============================== */
+@media (min-width: 768px) {
+  .nav-wrap {
+    margin: 0 var(--section-px);
+  }
+
+  .nav-container-margin {
+    padding: 2.5rem;
+  }
+
+  .nav-link {
+    cursor: pointer;
+  }
+
+  .nav-link-wrapper {
+    font-size: 1rem;
+    font-weight: 300;
+    transition: all 0.15s ease;
+  }
+
+  .nav-link-wrapper:hover {
+    color: var(--accent);
+    font-weight: 500;
+    transform: scale(1.07);
+  }
+
+  .menu {
+    top: 3.5rem;
+  }
+
+  .menu.show-menu {
+    height: 38em;
+  }
+
+  .menu-list {
+    gap: 2.5rem;
+    margin-bottom: 5.5rem;
+  }
+
+  .cv-wrap {
+    gap: 4.5rem;
+  }
+
+  .mode-wrap {
+    top: 2.7rem;
+  }
+}
+
+/* ==============================
+  lg+ — 1024px: full desktop nav
+=============================== */
+@media (min-width: 1024px) {
+  .nav-wrap {
+    margin-top: 1rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  /* Show desktop inline links */
+  .desktop-links {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .desktop-links a {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--muted);
+    transition: color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .desktop-links a:hover {
+    color: var(--accent);
+  }
+
+  /* Show desktop elements */
+  .hide-mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .cv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.45rem 1rem;
+    border-radius: 0.6rem;
+    border: 1px solid var(--border-muted);
+    background: var(--softBg);
+    color: var(--text);
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .cv-download-btn:hover {
+    opacity: 0.7;
+  }
+
+  /* Hide hamburger and mobile menu */
+  .hamburger {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+
+  .nav-right {
+    gap: 1rem;
+  }
+}
+
+/* ==============================
+  xl+ — 1280px
+=============================== */
+@media (min-width: 1280px) {
+  .nav-wrap {
+    padding: 0.2rem 1.5rem;
+    max-width: calc(var(--max) + 4rem);
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+
+  .desktop-links a {
+    font-size: 0.9rem;
+  }
+
+  .nav-right {
+    gap: 2rem
+  }
+}
+
+/* ==============================
+  2xl+ — 1536px
+=============================== */
+@media (min-width: 1536px) {
+  .nav-wrap {
+    margin-top: 1rem;
+    max-width: calc(var(--max) + 4rem);
+  }
+
+  .hero-headline {
+    font-size: 3rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .my-hero-card {
+    max-width: 500px;
+  }
+
+  .desktop-links a {
+    font-size: 0.87rem;
+  }
+
+  .desktop-links {
+    gap: 3rem;
+  }
+}
+
+/* ==============================
+  3xl+ — 1920px
+=============================== */
+@media (min-width: 1920px) {
+  .nav-wrap {
+    margin-top: 1rem;
+  }
+
+  .logo-name {
+    font-size: 1.1rem;
+  }
+
+  .desktop-links a {
+    font-size: 0.93rem;
+  }
+
+  .cv-download-btn {
+    font-size: 0.9rem;
+    padding: 0.55rem 1.15rem;
+  }
+}
+
+/* ==============================
+  4xl+ — 2560px
+=============================== */
+@media (min-width: 2560px) {
+  .nav-wrap {
+    margin-top: 1rem;
+  }
+
+  .logo-name {
+    font-size: 1.2rem;
+  }
+
+  .desktop-links a {
+    font-size: 1rem;
+  }
+
+  .cv-download-btn {
+    font-size: 0.98rem;
+    padding: 0.6rem 1.3rem;
+  }
 }

@@ -24,18 +24,18 @@ function Nav({ theme, setTheme }) {
       { label: 'About me', href: '#about', id: 'about' },
       { label: 'My Process', href: '#my-process', id: 'my-process' },
       { label: 'Git Activity', href: '#git-activity', id: 'git-activity' },
-      { label: 'CTA', href: '#cta', id: 'cta' },
-
+      { label: 'Collaborate', href: '#cta', id: 'cta' },
     ],
     [],
   );
 
+  // Close menu when user interacts outside it
   useEffect(function () {
     function handleOutsideClick(e) {
       const clickedEl = e.target; // The element that was clicked
       const navEl = navRef.current;
 
-      // navEl does not contain clickedEl ? close
+      // if click is NOT in navEl
       if (navEl && !navEl.contains(clickedEl)) {
         setIsMenuOpen(false);
       }
@@ -48,19 +48,34 @@ function Nav({ theme, setTheme }) {
     };
   }, []);
 
+  // Close menu when user scrolls
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    function handleScroll() {
+      setIsMenuOpen(false);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isMenuOpen]);
+
   function handleMenuToggle(e) {
     e.stopPropagation();
     setIsMenuOpen((prev) => !prev);
   }
 
   function handleLinkSelect() {
-    setIsMenuOpen(false)
+    setIsMenuOpen(false);
   }
 
   return (
     <header className="nav-wrap">
       <div className="nav" ref={navRef}>
-        {/* Git + Logo */}
+        {/* Brand */}
         <a href="#top" className="brand-container">
           <div className="git-icon">
             <GitIcon size={26} />
@@ -68,20 +83,41 @@ function Nav({ theme, setTheme }) {
           <span className="logo-name">Martins</span>
         </a>
 
+        {/* Desktop inline nav links */}
+        <ul className="desktop-links">
+          {links.map((linkObj) => (
+            <li key={linkObj.id}>
+              <a href={linkObj.href} className="desktop-link">
+                {linkObj.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Desktop right controls */}
         <div className="nav-right">
-          {/* Theme toggle (only desktop) */}
+          {/* Desktop theme toggle */}
           <div className="hide-mobile">
             {theme === 'dark' ? (
-              <button className="sun-toggle">
-                <SunIcon size={30} />
+              <button
+                className="sun-toggle"
+                onClick={() => setTheme('light')}
+                aria-label="Switch to light mode"
+              >
+                <SunIcon size={22} />
               </button>
             ) : (
-              <button className="moon-toggle">
-                <MoonIcon size={30} />
+              <button
+                className="moon-toggle"
+                onClick={() => setTheme('dark')}
+                aria-label="Switch to dark mode"
+              >
+                <MoonIcon size={22} />
               </button>
             )}
           </div>
 
+          {/* Desktop resume button */}
           <button
             href="https://drive.google.com/file/d/1mDG3Eqml6B46pI2y28T2RR5Mr1bdBu4b/view?usp=drivesdk"
             className="cv-download-btn hide-mobile"
@@ -102,9 +138,11 @@ function Nav({ theme, setTheme }) {
           </button>
         </div>
 
-        {/* Mobile menu bar */}
-        <div className={`menu ${isMenuOpen ? 'show-menu' : ''}`}>
-          {/* Mode toggle (mobile) */}
+        {/* Mobile dropdown menu */}
+        <div
+          className={`menu ${isMenuOpen ? 'show-menu' : ''} ${isMenuOpen ? 'nav-container-margin' : ''}`}
+        >
+          {/* Mobile theme toggle */}
           <div className="mode-wrap">
             <div className="mode-icon-wrap">
               <div
@@ -121,18 +159,22 @@ function Nav({ theme, setTheme }) {
             </div>
           </div>
 
-          {/* Menu links */}
+          {/* Mobile menu links */}
           <ul className="menu-list">
             {links.map((linkObj) => (
-              <li key={linkObj.id}>
-                <a href={linkObj.href} className={`nav-link `} onClick={handleLinkSelect}>
+              <li key={linkObj.id} className="nav-link-wrapper">
+                <a
+                  href={linkObj.href}
+                  className={`nav-link`}
+                  onClick={handleLinkSelect}
+                >
                   {linkObj.label}
                 </a>
               </li>
             ))}
           </ul>
 
-          {/* View or download CV */}
+          {/* Mobile CV links */}
           <div className="cv-wrap">
             <div className="view-cv-icon">
               <ReadCvIcon size={21} />

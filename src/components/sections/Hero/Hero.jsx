@@ -71,7 +71,7 @@ function Hero() {
           </motion.p>
         </div>
 
-        <motion.div className="hero-actions" variants={itemVariants}>
+        <motion.div className="btn-container" variants={itemVariants}>
           <button className="btn primary" onClick={scrollToProjects}>
             See My Works
           </button>
