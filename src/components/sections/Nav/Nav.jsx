@@ -16,12 +16,12 @@ function Nav({ theme, setTheme }) {
     () => [
       { label: 'Home', href: '#top', id: 'top' },
       {
-        label: 'Core Capabilities',
+        label: 'Capabilities',
         href: '#core-capabilities',
         id: 'core-capabilities',
       },
       { label: 'Projects', href: '#projects', id: 'projects' },
-      { label: 'About me', href: '#about', id: 'about' },
+      { label: 'About', href: '#about', id: 'about' },
       { label: 'My Process', href: '#my-process', id: 'my-process' },
       { label: 'Git Activity', href: '#git-activity', id: 'git-activity' },
       { label: 'Collaborate', href: '#cta', id: 'cta' },

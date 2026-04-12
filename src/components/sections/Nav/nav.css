@@ -1,3 +1,5 @@
+/* nav.css */
+
 /* ==============================
   Nav Wrapper — sticky pill
 =============================== */
@@ -7,10 +9,11 @@
   display: sticky;
   border: 1px solid var(--border-muted);
   border-radius: 2rem;
-  margin: 0 0.7rem;
+  margin: 0 var(--section-px);
   z-index: 50;
   background: var(--navBg);
   backdrop-filter: blur(8px);
+  isolation: isolate;
 }
 
 /* ==============================
@@ -22,8 +25,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1.2rem;
-  max-width: var(--max);
-  margin: 0 auto;
 }
 
 /* ==============================
@@ -316,7 +317,7 @@
 @media (min-width: 1024px) {
   .nav-wrap {
     margin-top: 1rem;
-    padding: 0.2rem 0.5rem;
+    /* padding: 0.2rem 0.5rem; */
   }
 
   /* Show desktop inline links */
@@ -378,7 +379,6 @@
     display: none;
   }
 
-
   .nav-right {
     gap: 1rem;
   }
@@ -389,10 +389,9 @@
 =============================== */
 @media (min-width: 1280px) {
   .nav-wrap {
-    padding: 0.2rem 1.5rem;
-    max-width: calc(var(--max) + 4rem);
-    margin: 0 auto;
-    margin-top: 1rem;
+    padding: 0; /* no extra inset */
+    max-width: var(--max); /* was calc(var(--max) + 4rem) */
+    margin: 1rem auto 0;
   }
 
   .desktop-links a {
@@ -400,7 +399,7 @@
   }
 
   .nav-right {
-    gap: 2rem
+    gap: 2rem;
   }
 }
 
@@ -408,13 +407,14 @@
   2xl+ — 1536px
 =============================== */
 @media (min-width: 1536px) {
-  .nav-wrap {
-    margin-top: 1rem;
-    max-width: calc(var(--max) + 4rem);
+  @media (min-width: 1536px) {
+    .nav-wrap {
+      max-width: var(--max); /* was calc(var(--max) + 4rem) */
+    }
   }
 
   .hero-headline {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     letter-spacing: 0.15rem;
   }
 

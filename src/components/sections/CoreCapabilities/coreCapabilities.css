@@ -1,13 +1,28 @@
 .capabilities-section {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 4rem 1.5rem 5rem;
+  gap: 3rem;
+  padding: 4rem var(--section-px) 5rem;
+}
+
+.capabilities-section .section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.left-capabilities-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.capability-left-text {
+  font-size: 0.9rem;
 }
 
 .capabilities-card {
   position: relative;
-  margin: 2rem 0;
   padding: 2.5rem 1rem 1rem;
   border-radius: 1rem;
   background: var(--cardBg);
@@ -155,4 +170,322 @@
 .otw-title {
   font-size: 0.8rem;
   color: var(--text-white);
+}
+
+/* ==============================
+  What's next
+=============================== */
+.whatsNext-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+
+.whatsNext-label {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin: 0;
+  opacity: 0.65;
+  gap: 0.5rem;
+}
+
+/* Row holding all steps + arrows */
+.whatsNext-track {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.whatsNext-bottom-arrow {
+  display: none;
+}
+
+/* Each step + its trailing arrow */
+.whatsNext-step-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* The step pill itself */
+.whatsNext-step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.38rem 0.8rem;
+  border-radius: 0.55rem;
+  background: var(--container-bg);
+  border: 1.5px solid var(--border-muted);
+  /* background: transparent; */
+}
+
+.whatsNext-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.whatsNext-step-name {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Arrow connector */
+.whatsNext-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.whatsNext-dot {
+  display: none;
+}
+
+/* ==============================
+  md+ — 768px
+=============================== */
+@media (min-width: 768px) {
+  .capabilities-section {
+    padding: 6rem 2rem;
+    gap: 3.5rem;
+  }
+
+  .capabilities-section .section-inner {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    column-gap: 3.5rem;
+    row-gap: 0;
+    align-items: start;
+  }
+
+  .capabilities-card {
+    padding: 2.5rem 1.8rem 1.5rem;
+  }
+
+  .tool-name {
+    font-size: 0.72rem;
+  }
+
+  .category-title {
+    font-size: 0.78rem;
+  }
+
+  .whatsNext-wrapper {
+    gap: 1rem;
+  }
+
+  .whatsNext-track {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: fit-content;
+    padding: 0 3rem;
+    gap: 2rem;
+  }
+
+  .whatsNext-step-group {
+    position: relative;
+  }
+
+  .whatsNext-step {
+    padding: 1rem 2rem;
+  }
+
+  .whatsNext-arrow {
+    display: none;
+  }
+
+  .whatsNext-bottom-arrow {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--muted);
+    left: 50%;
+    top: 3.5rem;
+  }
+
+  .whatsNext-dot {
+    display: flex;
+  }
+}
+
+/* ==============================
+  lg+ — 1024px: side layout with aside copy
+=============================== */
+@media (min-width: 1024px) {
+  .capabilities-section {
+    padding: 6rem 2rem;
+    gap: 5rem;
+  }
+
+  .capabilities-section {
+    padding: 5.5rem 2rem;
+  }
+
+  .capabilities-section .section-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    column-gap: 7.5rem;
+    row-gap: 0;
+    align-items: start;
+  }
+
+  .capabilities-card {
+    padding: 2.5rem 1.8rem 1.5rem;
+  }
+
+  .capability-group {
+    gap: 1.2rem;
+  }
+
+  .pill-wrapper {
+    gap: 1rem;
+  }
+
+  .capability-pill {
+    gap: 0.8rem;
+
+    background: var(--softBg);
+    padding: 0.5rem 0.6rem;
+  }
+
+  .tool-name {
+    font-size: 0.72rem;
+  }
+
+  .category-title {
+    font-size: 0.78rem;
+  }
+
+  .whatsNext-wrapper {
+    gap: 1rem;
+  }
+
+  .whatsNext-track {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 0 3rem;
+    gap: 2rem;
+  }
+
+  .whatsNext-step-group {
+    position: relative;
+  }
+
+  .whatsNext-step-name {
+    font-size: 0.8rem;
+  }
+
+  .whatsNext-arrow {
+    display: none;
+  }
+
+  .whatsNext-bottom-arrow {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--muted);
+    left: 50%;
+    top: 3.7rem;
+  }
+
+  .whatsNext-dot {
+    display: flex;
+  }
+}
+
+/* ==============================
+  xl+ — 1280px
+=============================== */
+@media (min-width: 1280px) {
+  .capabilities-section {
+    padding: 6rem 0;
+  }
+
+  .capabilities-card {
+    padding: 3rem 2.5rem 1.8rem;
+    column-gap: 3rem;
+  }
+
+  .capabilities-section .section-inner {
+    column-gap: 4rem;
+  }
+}
+
+/* ==============================
+  2xl+ — 1536px
+=============================== */
+@media (min-width: 1536px) {
+  .capabilities-section {
+    padding: 7rem 0;
+  }
+
+  .capabilities-aside p {
+    font-size: 0.92rem;
+  }
+}
+
+/* ==============================
+  3xl+ — 1920px
+=============================== */
+@media (min-width: 1920px) {
+  .capabilities-section {
+    padding: 8rem 0;
+  }
+
+  .tool-name {
+    font-size: 0.88rem;
+  }
+
+  .category-title {
+    font-size: 0.95rem;
+  }
+
+  .capability-pill {
+    padding: 0.38rem 0.8rem;
+  }
+
+  .key-title {
+    font-size: 0.8rem;
+  }
+
+  .capabilities-aside p {
+    font-size: 1rem;
+  }
+}
+
+/* ==============================
+  4xl+ — 2560px
+=============================== */
+@media (min-width: 2560px) {
+  .tool-name {
+    font-size: 1.02rem;
+  }
+
+  .category-title {
+    font-size: 1.08rem;
+  }
+
+  .capabilities-aside p {
+    font-size: 1.15rem;
+  }
+
+  .key-title {
+    font-size: 0.92rem;
+  }
 }
