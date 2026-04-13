@@ -6,6 +6,12 @@
 }
 
 /* Section timeline wrapper */
+.my-process-section .section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .process-container {
   display: flex;
   position: relative;
@@ -218,10 +224,6 @@
     font-size: 0.95rem;
     max-width: 340px;
   }
-
-  /* .process-line-segment {
-    display: none;
-  } */
 }
 
 /* ==============================
