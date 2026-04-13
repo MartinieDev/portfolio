@@ -118,14 +118,14 @@ function Nav({ theme, setTheme }) {
           </div>
 
           {/* Desktop resume button */}
-          <button
+          <a
             href="https://drive.google.com/file/d/1mDG3Eqml6B46pI2y28T2RR5Mr1bdBu4b/view?usp=drivesdk"
             className="cv-download-btn hide-mobile"
             target="_blank"
             rel="noreferrer"
           >
             Resume
-          </button>
+          </a>
 
           {/* Mobile hamburger btn */}
           <button
