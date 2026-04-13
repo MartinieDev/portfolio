@@ -23,7 +23,7 @@ function MyProcess() {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{once: true}}
+      viewport={{ once: true }}
     >
       <SectionHead
         TagLevel="h2"
@@ -31,14 +31,26 @@ function MyProcess() {
         subtitle="From first conversation to final commit"
       />
 
-      <div className="process-container">
-        {processSteps.map((step, curIndex) => (
-          <ProcessStep
-            key={step.number}
-            step={step}
-            isLast={curIndex === processSteps.length - 1}
-          />
-        ))}
+      <div className="section-inner">
+        <div className="process-container">
+          {/* <div className="process-aside">
+            <p>
+              Every build follows a sequence. I start with the core problem,
+              then layer decisions step by step until everything works as a
+              whole.
+            </p>
+          </div> */}
+
+          <div>
+            {processSteps.map((step, curIndex) => (
+            <ProcessStep
+              key={step.number}
+              step={step}
+              isLast={curIndex === processSteps.length - 1}
+            />
+          ))}
+          </div>
+        </div>
       </div>
     </motion.section>
   );

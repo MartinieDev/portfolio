@@ -3,8 +3,9 @@ import { fetchContributions } from './fetchContributions';
 import { motion } from 'framer-motion';
 import ContributionGraph from './ContributionGraph/ContributionGraph';
 import SectionHead from '../../reusables/SectionHead';
-import './gitActivity.css';
+import ContributionLineChart from './ContributionLineChart';
 import ArrowRightIcon from '../../../assets/icons/techIcons/ArrowRight';
+import './gitActivity.css';
 
 const containerVariants = {
   hidden: {
@@ -40,7 +41,7 @@ const footerVariant = {
 function scrollToContact() {
   window.scrollTo({
     top: document.body.scrollHeight,
-    behaviour: 'smooth',
+    behavior: 'smooth',
   });
 }
 
@@ -85,44 +86,59 @@ function GitActivity() {
         subtitle="Every square is a commit. Every commit is a progress."
       />
 
-      <div className="git-card">
-        {loading && <p className="git-state">Loading activity...</p>}
-        {error && <p className="git-state git-error">{error}</p>}
-        {!loading && !error && <ContributionGraph weeks={weeks} />}
-      </div>
-
-      <motion.div
-        className="git-footer"
-        variants={footerVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <div className="git-footer-content">
-          <div className="git-footer-text-wrapper">
-            <p className="git-footer-que">Got a project in mind?</p>
-
-            <p className="git-footer-text">
-              Whether it’s a product, a freelance build, or a growing team, I’m
-              open to the right opportunity.
+      <div className="section-inner">
+        <div className="git-container">
+          <div className="git-left-content">
+            <p className="git-aside-text">
+              This contribution grid reflects my development rhythm and
+              consistency over time.
             </p>
+
+            <div className="git-chart-card git-card-chart">
+              <ContributionLineChart weeks={weeks} />
+            </div>
           </div>
 
-          <button
-            href="https://github.com/Martins-Jay?tab=repositories"
-            target="_blank"
-            rel="noreferrer"
-            className="git-btn btn primary"
-            onClick={scrollToContact}
-          >
-            <span>Let's talk</span>
-
-            <div className="icon-wrapper">
-              <ArrowRightIcon />
-            </div>
-          </button>
+          <div className="git-card">
+            {loading && <p className="git-state">Loading activity...</p>}
+            {error && <p className="git-state git-error">{error}</p>}
+            {!loading && !error && <ContributionGraph weeks={weeks} />}
+          </div>
         </div>
-      </motion.div>
+
+        <motion.div
+          className="git-footer"
+          variants={footerVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <div className="git-footer-content">
+            <div className="git-footer-text-wrapper">
+              <p className="git-footer-que">Got a project in mind?</p>
+
+              <p className="git-footer-text">
+                Whether it’s a product, a freelance build, or a growing team,
+                I’m open to the right opportunity.
+              </p>
+            </div>
+
+            <button
+              href="https://github.com/Martins-Jay?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+              className="git-btn btn primary"
+              onClick={scrollToContact}
+            >
+              <span>Let's talk</span>
+
+              <div className="icon-wrapper">
+                <ArrowRightIcon />
+              </div>
+            </button>
+          </div>
+        </motion.div>
+      </div>
     </motion.section>
   );
 }

@@ -1,8 +1,8 @@
 .capabilities-section {
   display: flex;
+  padding: 4rem var(--section-px) 5rem;
   flex-direction: column;
   gap: 3rem;
-  padding: 4rem var(--section-px) 5rem;
 }
 
 .capabilities-section .section-inner {
@@ -26,6 +26,7 @@
   padding: 2.5rem 1rem 1rem;
   border-radius: 1rem;
   background: var(--cardBg);
+  max-width: fit-content;
 }
 
 .capability-group {
@@ -217,7 +218,7 @@
 .whatsNext-step {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
   padding: 0.38rem 0.8rem;
   border-radius: 0.55rem;
   background: var(--container-bg);
@@ -271,28 +272,35 @@
   }
 
   .capabilities-card {
+    max-width: fit-content;
     padding: 2.5rem 1.8rem 1.5rem;
-  }
-
-  .tool-name {
-    font-size: 0.72rem;
   }
 
   .category-title {
     font-size: 0.78rem;
   }
 
+  .tool-name {
+    font-size: 0.72rem;
+  }
+
   .whatsNext-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
 
   .whatsNext-track {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     width: fit-content;
-    padding: 0 3rem;
+    padding: 0 1rem;
     gap: 2rem;
+  }
+
+  .whatsNext-arrow {
+    display: none;
   }
 
   .whatsNext-step-group {
@@ -303,8 +311,8 @@
     padding: 1rem 2rem;
   }
 
-  .whatsNext-arrow {
-    display: none;
+  .whatsNext-dot {
+    display: flex;
   }
 
   .whatsNext-bottom-arrow {
@@ -315,10 +323,6 @@
     color: var(--muted);
     left: 50%;
     top: 3.5rem;
-  }
-
-  .whatsNext-dot {
-    display: flex;
   }
 }
 
@@ -345,6 +349,7 @@
 
   .capabilities-card {
     padding: 2.5rem 1.8rem 1.5rem;
+    max-width: fit-content;
   }
 
   .capability-group {
@@ -352,7 +357,7 @@
   }
 
   .pill-wrapper {
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .capability-pill {
@@ -362,15 +367,18 @@
     padding: 0.5rem 0.6rem;
   }
 
-  .tool-name {
-    font-size: 0.72rem;
-  }
-
   .category-title {
     font-size: 0.78rem;
   }
 
+  .tool-name {
+    font-size: 0.72rem;
+  }
+
   .whatsNext-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
 
@@ -378,8 +386,12 @@
     display: flex;
     flex-direction: column;
     width: fit-content;
-    padding: 0 3rem;
+    padding: 0 1rem;
     gap: 2rem;
+  }
+
+  .whatsNext-arrow {
+    display: none;
   }
 
   .whatsNext-step-group {
@@ -388,10 +400,6 @@
 
   .whatsNext-step-name {
     font-size: 0.8rem;
-  }
-
-  .whatsNext-arrow {
-    display: none;
   }
 
   .whatsNext-bottom-arrow {

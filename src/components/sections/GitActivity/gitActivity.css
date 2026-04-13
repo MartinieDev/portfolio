@@ -3,7 +3,7 @@
   flex-direction: column;
   padding: 4rem 1.5rem 5rem;
   gap: 2rem;
-  height: 100vh;
+  /* height: 100vh; */
   border-bottom: 1.5px solid var(--border);
 }
 
@@ -41,6 +41,31 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.git-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.git-aside-text {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.git-chart-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 1.5rem 2rem;
+  background-color: var(--softBg);
+  overflow: hidden;
+  margin: 2rem 0;
+  min-height: 10rem;
 }
 
 .git-card {
@@ -136,6 +161,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-top: -1rem;
 }
 
 .git-footer-content a {
@@ -153,4 +179,232 @@
   font-size: 0.8rem;
   font-weight: 300;
   color: var(--muted);
+}
+
+/* ========================
+  ContributionLineChart 
+=========================*/
+.linechart-wrapper {
+  width: 100%;
+}
+
+.linechart-svg {
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* subtle fade */
+.linechart-svg polyline {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.9;
+}
+
+/* hover polish (optional upgrade) */
+.linechart-svg circle {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.linechart-svg circle:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.chart-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.chart-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.chart-subtitle {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.chart-insight {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+/* ==============================
+  md+ — 768px
+=============================== */
+@media (min-width: 768px) {
+  .git-section {
+    padding: 5.5rem 2rem;
+  }
+
+  .git-card {
+    padding: 1.8rem 1.5rem;
+  }
+
+  .git-footer-que {
+    font-size: 1.05rem;
+  }
+}
+
+/* ==============================
+  lg+ — 1024px: two-col header, footer side-by-side
+=============================== */
+@media (min-width: 1024px) {
+  .git-section {
+    padding: 6rem 2rem;
+  }
+
+  .git-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: start;
+    gap: 4rem;
+  }
+
+  .git-aside-text {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.9;
+    margin-top: 2rem;
+  }
+
+  .git-chart-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    padding: 1.5rem 2rem;
+    background-color: var(--softBg);
+    overflow: hidden;
+    margin: 2rem 0;
+    min-height: 18rem;
+  }
+
+  /* Graph card: full width, row 2 */
+  .git-card {
+    margin-top: 8rem;
+    min-height: 23rem;
+  }
+
+  .git-footer-que {
+    font-size: 1.3rem;
+  }
+
+  .git-footer-text {
+    font-size: 1rem;
+  }
+
+  .git-btn {
+    width: 10rem;
+  }
+}
+
+/* ==============================
+  xl+ — 1280px
+=============================== */
+@media (min-width: 1280px) {
+  .git-section {
+    padding: 6rem 0;
+  }
+
+  .git-section .section-inner {
+    column-gap: 4rem;
+  }
+
+  .git-card {
+    padding: 2.2rem 3rem;
+  }
+}
+
+/* ==============================
+  2xl+ — 1536px
+=============================== */
+@media (min-width: 1536px) {
+  .git-section {
+    padding: 7rem 0;
+  }
+
+  .git-aside p {
+    font-size: 0.92rem;
+  }
+
+  .git-footer-que {
+    font-size: 1.5rem;
+  }
+
+  .git-footer-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* ==============================
+  3xl+ — 1920px
+=============================== */
+@media (min-width: 1920px) {
+  .git-section {
+    padding: 8rem 0;
+  }
+  .git-container {
+    gap: 8rem;
+  }
+
+  .git-aside p {
+    font-size: 1rem;
+  }
+
+  .git-footer-que {
+    font-size: 1.35rem;
+  }
+
+  .git-footer-text {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: 0.85rem;
+  }
+
+  .month-label,
+  .day-label {
+    font-size: 0.75rem;
+  }
+
+  .graph-total-number,
+  .git-username {
+    font-size: 0.78rem;
+  }
+}
+
+/* ==============================
+  4xl+ — 2560px
+=============================== */
+@media (min-width: 2560px) {
+  .git-footer-que {
+    font-size: 1.65rem;
+  }
+
+  .git-footer-text {
+    font-size: 1.15rem;
+  }
+
+  .git-aside p {
+    font-size: 1.15rem;
+  }
+
+  .card-title {
+    font-size: 0.98rem;
+  }
 }

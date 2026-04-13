@@ -9,8 +9,8 @@ export const projects = [
     Built with reusable React components and CSS, MoodPad leverages localStorage to persist data and demonstrates proficiency in state management and component-driven architecture.`,
     stack: ['React', 'CSS', 'REST API'],
     images: [
-      // '/images/cryptospy/add-holdings-view.jpg',
-      '/project_images/moodpad/moodpad-history-view.jpg',
+      '/project_images/moodpad/moodpad-overview-view.jpg',
+      // '/project_images/moodpad/moodpad-history-view.jpg',
       // '/images/moodpad-images/moodpad-overview-view.jpg',
     ],
     links: {
@@ -51,7 +51,7 @@ export const projects = [
     images: [
       // '/images/moodpad/moodpad.jpg',
       // '/images/moodpad/moodpad-log-view.jpg',
-      '/project_images/cryptospy/cryptospy.jpg',
+      '/project_images/cryptospy/cryptospy-overview-view.jpg',
       // '/images/moodpad/moodpad-overview-view.jpg',
     ],
     links: {

@@ -13,10 +13,12 @@ function ProjectList() {
         subtitle="Explore my projects, view highlights, and read case studies."
       />
 
-      <div className="work-list">
-        {projects.map((projectObj) => (
-          <ProjectRow key={projectObj.id} projectObj={projectObj} />
-        ))}
+      <div className="section-inner">
+        <div className="work-list">
+          {projects.map((projectObj) => (
+            <ProjectRow key={projectObj.id} projectObj={projectObj} />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -42,41 +42,54 @@ function About() {
         TagLevel="h2"
       />
 
-      <div className="about-body">
-        {/* Text + buttons */}
-        <div className="about-left">
-          <div className="about-text">
-            <p>
-              I'm Martins, a frontend developer who came into tech through
-              Electrical Engineering. That path taught me to see systems,
-              patterns, and connections before writing a single line of code.
-            </p>
-            <p>
-              I’m drawn to the details that shape an experience, from thoughtful
-              spacing to purposeful animations and components designed to be
-              easy to work with. Every decision is intentional, and every
-              interaction earns its place.
-            </p>
-            <p>
-              Beyond coding, I explore interfaces and work toward experiences
-              that feel seamless, refined, and easy to use.
-            </p>
+      <div className="section-inner">
+        <div className="about-body">
+          <div className="about-left">
+            <img
+              className={`about-image `}
+              src="/project_images/my-image.png"
+              alt="My professional headshot reference"
+              draggable={false}
+              onContextMenu={(e) => e.preventDefault()}
+              fetchPriority="high"
+            />
           </div>
+          
+          {/* Text + buttons */}
+          <div className="about-right">
+            <div className="about-text">
+              <p>
+                I'm Martins, a frontend developer who came into tech through
+                Electrical Engineering. That path taught me to see systems,
+                patterns, and connections before writing a single line of code.
+              </p>
+              <p>
+                I’m drawn to the details that shape an experience, from
+                thoughtful spacing to purposeful animations and components
+                designed to be easy to work with. Every decision is intentional,
+                and every interaction earns its place.
+              </p>
+              <p>
+                Beyond coding, I explore interfaces and work toward experiences
+                that feel seamless, refined, and easy to use.
+              </p>
+            </div>
 
-          <div className="hero-actions" style={{ margin: '1rem 0' }}>
-            <button className="btn primary" onClick={scrollToContact}>
-              <span>Get In Touch</span>
-            </button>
+            <div className="btn-container" style={{ margin: '1rem 0' }}>
+              <button className="btn primary" onClick={scrollToContact}>
+                <span>Get In Touch</span>
+              </button>
 
-            <button className="btn secondary">
-              <a href="https://drive.google.com/file/d/1vAHn8bCuyYqAQX-kxI6qSyzTLBY_jipr/view?usp=drivesdk">
-                My Resume
-              </a>
+              <button className="btn secondary">
+                <a href="https://drive.google.com/file/d/1vAHn8bCuyYqAQX-kxI6qSyzTLBY_jipr/view?usp=drivesdk">
+                  My Resume
+                </a>
 
-              <div className="icon-wrapper">
-                <DownloadIcon size={19} />
-              </div>
-            </button>
+                <div className="icon-wrapper">
+                  <DownloadIcon size={19} />
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
