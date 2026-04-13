@@ -14,7 +14,7 @@ function ContributionLineChart({ weeks }) {
   }, [weeks]);
 
   // FIXED SCALE (0–100)
-  const max = 100;
+  // const max = 100;
 
   const width = 600;
   const height = 300;
