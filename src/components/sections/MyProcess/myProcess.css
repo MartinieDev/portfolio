@@ -23,11 +23,11 @@
 }
 
 .process-step-container {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin: 1.5rem 0;
-  position: relative;
+  margin: 2.5rem 0;
   z-index: 1;
   width: 100%;
   max-width: 600px; /* never wider than screen */
