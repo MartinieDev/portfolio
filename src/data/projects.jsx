@@ -12,7 +12,6 @@ export const projects = [
       'React Router v6',
       'Context API',
       'useReducer',
-      'Axios',
       'Framer Motion',
       'CSS Modules',
     ],
